@@ -95,7 +95,6 @@ export default function Card(props) {
       </table>
       {props.upgrade}
       {props.buttonAchat}
-      <h2>{nb}</h2>
       <img src={props.image} alt="img" />
       {props.buttonVente}
     </SCard>

@@ -63,12 +63,6 @@ export default styled.div`
     font-size: 28px;
     font-weight: bold;
   }
-  h2 {
-    text-shadow: 2px 2px 2px #00487d;
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-  }
   @media screen and (max-width: 600px) {
   }
 `;

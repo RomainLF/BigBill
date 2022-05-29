@@ -52,7 +52,6 @@ export default function CardAchat(props) {
   };
 
   const incrementInvest = () => {
-    // setInvestissement(investissement);
     setInvestissement([...investissement, props.id]);
   };
 
