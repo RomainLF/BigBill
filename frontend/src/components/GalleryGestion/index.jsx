@@ -7,8 +7,7 @@ import CardVente from "@components/CardVente";
 import Upgrade from "@components/Upgrade";
 
 export default function Gallery() {
-  const { investissement, setInvestissement, quantity } =
-    useContext(statsContext);
+  const { investissement } = useContext(statsContext);
   return (
     <SGallery>
       {investissement.map((id) => {
@@ -21,6 +20,10 @@ export default function Gallery() {
               <CardVente
                 cout_achat={data.cout_achat}
                 profit={data.profit}
+                impact_ecologique={data.impact_ecologique}
+                consommation_eau={data.consommation_eau}
+                consommation_energetique={data.consommation_energetique}
+                utilisation_sol={data.utilisation_sol}
                 id={data.id}
               />
             }

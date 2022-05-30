@@ -1,8 +1,7 @@
 import SCard from "./style";
 import { useContext } from "react";
 import statsContext from "@services/contexts";
-import { useState } from "react";
-import useInterval from "../../services/contexts/useInterval";
+import useInterval from "./../../services/contexts/useInterval";
 
 export default function CardVente(props) {
   const {
@@ -12,11 +11,20 @@ export default function CardVente(props) {
     setAnnualProfit,
     investissement,
     setInvestissement,
+    setEarth,
+    earth,
+    setEau,
+    eau,
+    setEnergie,
+    energie,
+    setSol,
+    sol,
+    timerActive,
   } = useContext(statsContext);
 
   //========  €  =======//
   const deIncrementMoney = () => {
-    setMoney(money + props.cout_achat);
+    setMoney(money - props.cout_achat);
   };
   //Incremente les profits par an//
   const deIncrementAnnualProfit = () => {
@@ -28,6 +36,21 @@ export default function CardVente(props) {
     setInvestissement([...investissement, props.id]);
   };
 
+  //========  actualisation chaque année des stats  ========//
+  useInterval(() => {
+    //rajouter (timerActive 11)
+    if (timerActive) setEarth(earth + props.impact_ecologique);
+  }, 5000);
+  useInterval(() => {
+    if (timerActive) setEau(eau + props.consommation_eau);
+  }, 5000);
+  useInterval(() => {
+    if (timerActive) setEnergie(energie + props.consommation_energetique);
+  }, 5000);
+  useInterval(() => {
+    if (timerActive) setSol(sol + props.utilisation_sol);
+  }, 5000);
+
   return (
     <SCard>
       <div className="center">
@@ -36,11 +59,6 @@ export default function CardVente(props) {
           onClick={() => {
             deIncrementMoney();
             deIncrementAnnualProfit();
-            deIncrementEarth();
-            setNb(nb + 1);
-            deIncrementEau();
-            deIncrementEnergie();
-            deIncrementSol();
             deIncrementInvest();
           }}
         >

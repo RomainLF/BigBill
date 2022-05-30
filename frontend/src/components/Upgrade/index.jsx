@@ -11,7 +11,9 @@ export default function Upgrade(props) {
         <div className="five">
           <button
             className="cube cube1"
-            onClick={() => showPlusStats()}
+            onClick={() => {
+              showPlusStats();
+            }}
           ></button>
           <button className="cube cube2"></button>
           <button className="cube cube3"></button>
