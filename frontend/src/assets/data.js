@@ -32,7 +32,6 @@ const datas = [
     cout_achat: 213160,
     superficie: "1hectar",
     production: 10,
-    qte: 0,
   },
   {
     id: 2,
@@ -47,7 +46,6 @@ const datas = [
     cout_achat: 76673,
     superficie: "1hectar",
     production: 100,
-    qte: 0,
   },
   {
     id: 3,
@@ -62,7 +60,6 @@ const datas = [
     cout_achat: 41218,
     superficie: "1hectar",
     production: 80,
-    qte: 0,
   },
   {
     id: 4,
@@ -77,7 +74,6 @@ const datas = [
     cout_achat: 19343,
     superficie: "1hectar",
     production: 0.6,
-    qte: 0,
   },
   ,
   {
@@ -93,7 +89,6 @@ const datas = [
     cout_achat: 28290,
     superficie: "1hectar",
     production: 34,
-    qte: 0,
   },
   ,
   {
@@ -109,7 +104,6 @@ const datas = [
     cout_achat: 59648,
     superficie: "1hectar",
     production: 9,
-    qte: 0,
   },
   {
     id: 7,
@@ -124,7 +118,6 @@ const datas = [
     cout_achat: 61860,
     superficie: "1hectar",
     production: 8,
-    qte: 0,
   },
   {
     id: 8,
@@ -139,7 +132,6 @@ const datas = [
     cout_achat: 400000,
     superficie: "1hectar",
     production: 0,
-    qte: 0,
   },
   {
     id: 9,
@@ -154,7 +146,6 @@ const datas = [
     cout_achat: 40000,
     superficie: "1hectar",
     production: 0,
-    qte: 0,
   },
   {
     id: 10,
@@ -169,7 +160,6 @@ const datas = [
     cout_achat: 213200,
     superficie: "1hectar",
     production: 10,
-    qte: 0,
   },
   {
     id: 11,
@@ -184,7 +174,6 @@ const datas = [
     cout_achat: 73690,
     superficie: "1hectar",
     production: 7,
-    qte: 0,
   },
   {
     id: 12,
