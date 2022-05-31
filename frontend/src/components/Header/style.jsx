@@ -6,50 +6,25 @@ import vache from "@assets/vache.png";
 import arbre from "@assets/arbre.png";
 
 export default styled.header`
-  text-align: center;
-  height: 6vh;
-  background-color: #585ad4;
-  img {
-    height: 100%;
-    margin-top: -6rem;
-  }
-  .bg {
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-  .globe {
-    background-image: url(${globe});
-  }
-  .Champ {
-    background-image: url(${champ});
-  }
-  .Usine {
-    background-image: url(${usine});
-  }
-  .Vache {
-    background-image: url(${vache});
-  }
-  .Arbre {
-    background-image: url(${arbre});
-  }
-
-  .catFiltre {
-    height: 5vh;
-    width: 30vw;
-    margin-left: 2rem;
+  height: 7vh;
+  background-color: #00487d;
+  display: flex;
+  .displayButton {
+    width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     button {
-      aspect-ratio: 1/1;
-      height: 3.5rem;
-      border-radius: 50%;
-      //margin-top: 1rem;
-      img {
-        //margin-top: -0.05rem;
-        //margin-left: -0.25rem;
-      }
+      width: 20vw;
+      height: 5vh;
+      border: none;
+      box-shadow: 8px 6px 5px 0px rgba(0, 0, 0, 0.75);
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: #c3c4cd;
     }
   }
+
   @media screen and (max-width: 600px) {
     .catFiltre {
       display: none;

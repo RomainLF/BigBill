@@ -8,11 +8,7 @@ export default function Timer() {
   return (
     <STimer>
       <div className="timer">
-        <img src="src/assets/timer.png" />
-
-        <p className={timerActive ? "showTimer" : "hideTimer"}>
-          Année : {timer}
-        </p>
+        <p> Année : {timer}</p>
         <p>Bénéfices par an:{annualProfit}€</p>
       </div>
     </STimer>

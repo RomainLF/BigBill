@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export default styled.header`
   text-align: center;
-  background-color: #585ad4;
+  background-color: #00487d;
   position: fixed;
   bottom: 0;
   width: 100vw;
-  img {
-    height: 2vh;
+  p {
+    color: #9dbdd4;
   }
 `;

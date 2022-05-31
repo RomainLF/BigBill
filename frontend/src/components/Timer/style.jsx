@@ -5,14 +5,12 @@ export default styled.div`
   font-weight: bold;
   text-shadow: 4px 0px 0px #fafafa;
   position: fixed;
-  bottom: 2vh;
-  margin-left: 1vw;
-
+  height: 23%;
+  margin-left: 10vw;
+  display: flex;
+  align-items: center;
   .timer {
-    font-size: 52px;
-    img {
-      width: 70px;
-    }
+    font-size: 2rem;
   }
   @media screen and (max-width: 600px) {
     .timer {

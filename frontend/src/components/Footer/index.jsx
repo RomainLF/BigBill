@@ -4,7 +4,7 @@ import logo from "../../assets/logoBigBill.png";
 export default function Header() {
   return (
     <SFooter>
-      <img src={logo} alt="logo" />
+      <p>© Big Bill invest</p>
     </SFooter>
   );
 }

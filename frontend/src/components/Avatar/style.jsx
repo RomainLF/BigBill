@@ -8,7 +8,7 @@ export default styled.div`
   justify-content: flex-end;
   img {
     margin-bottom: 0;
-    height: 350px;
+    height: 280px;
   }
   @media screen and (max-width: 600px) {
     display: none;
