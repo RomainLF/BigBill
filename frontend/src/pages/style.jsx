@@ -3,37 +3,56 @@ import styled from "styled-components";
 export default styled.section`
   font-weight: Bold;
   text-shadow: 5px 2px 2px #fbb7a2;
+  height: 94vh;
 
   .start {
     background: url("src/assets/home.jpg");
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
     height: 94vh;
-    div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .info {
+      background-color: #aaaaaa;
+      height: 80vh;
+      width: 40vw;
+      margin: 2rem;
       display: flex;
       align-items: center;
+      justify-content: center;
+      .note {
+        width: 45%;
+        height: 95%;
+        background-color: #00487d;
+        margin: 1rem;
+        border-radius: 1rem;
+      }
+      .news {
+        width: 45%;
+        height: 95%;
+        background-color: #000000;
+        margin: 1rem;
+        border-radius: 1rem;
+      }
     }
-  }
-
-  h1 {
-    font-size: 80px;
-    margin-bottom: 8vh;
-  }
-  p {
-    text-align: center;
-    font-size: 32px;
-  }
-  img {
-    height: 80px;
-    margin-right: 1em;
-  }
-  a {
-    font-size: 40px;
-    text-decoration: none;
-    margin-top: 2vh;
+    .autre {
+      background-color: #aaaaaa;
+      height: 80vh;
+      width: 40vw;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 2rem;
+      img {
+        width: 80%;
+        aspect-ratio: 1/1;
+        margin-top: -20vh;
+      }
+      .mainButton {
+        margin-top: -10vh;
+      }
+    }
   }
 
   .myButton {
