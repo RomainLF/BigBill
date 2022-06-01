@@ -2,7 +2,6 @@ import SCard from "./style";
 import { useContext } from "react";
 import statsContext from "@services/contexts";
 import { useState } from "react";
-import useInterval from "../../services/contexts/useInterval";
 
 export default function CardAchat(props) {
   const {
@@ -18,10 +17,8 @@ export default function CardAchat(props) {
     setSol,
     energie,
     setEnergie,
-    investissement,
-    setInvestissement,
-    quantity,
-    setQuantity,
+    setData,
+    data,
   } = useContext(statsContext);
 
   const [selected, isSelected] = useState(false);
@@ -52,11 +49,14 @@ export default function CardAchat(props) {
   };
 
   const incrementInvest = () => {
-    setInvestissement([...investissement, props.id]);
-  };
-
-  const incrementQuantity = () => {
-    setQuantity(quantity + 1);
+    setData(
+      data.map((d) => {
+        if (d.id === props.id) {
+          return { ...d, buy: true };
+        }
+        return d;
+      })
+    );
   };
 
   return (
@@ -73,7 +73,6 @@ export default function CardAchat(props) {
             incrementSol();
             incrementInvest();
             isSelected(true);
-            incrementQuantity();
           }}
         >
           Acheter pour <br />

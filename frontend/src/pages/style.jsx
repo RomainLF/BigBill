@@ -15,7 +15,7 @@ export default styled.section`
     .info {
       background-color: #aaaaaa;
       height: 80vh;
-      width: 40vw;
+      width: 55vw;
       margin: 2rem;
       display: flex;
       align-items: center;
@@ -38,7 +38,7 @@ export default styled.section`
     .autre {
       background-color: #aaaaaa;
       height: 80vh;
-      width: 40vw;
+      width: 30vw;
       display: flex;
       text-align: center;
       justify-content: center;
