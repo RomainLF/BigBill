@@ -11,7 +11,7 @@ export default function Upgrade(props) {
         <div className="five">
           <button
             className="cube cube1"
-            onClick={() => {
+            onMouseEnter={() => {
               showPlusStats();
             }}
           ></button>
