@@ -32,11 +32,12 @@ const datas = [
     cout_achat: 213160,
     superficie: "1hectar",
     production: 10,
+    upgrades: 0,
   },
   {
     id: 2,
     nom: "Champs de maïs",
-    profit: 350,
+    profit: 350, // profit * (upgrades * 20%)
     impact_ecologique: 124,
     consommation_eau: 275,
     consommation_energetique: 40,
@@ -46,6 +47,8 @@ const datas = [
     cout_achat: 76673,
     superficie: "1hectar",
     production: 100,
+    upgrades: 0,
+    isPreviewNextUpgrade: false,
   },
   {
     id: 3,
@@ -75,7 +78,6 @@ const datas = [
     superficie: "1hectar",
     production: 0.6,
   },
-  ,
   {
     id: 5,
     nom: "Champ de fraise",
@@ -90,7 +92,6 @@ const datas = [
     superficie: "1hectar",
     production: 34,
   },
-  ,
   {
     id: 6,
     nom: "Ferme de porc",
@@ -259,7 +260,6 @@ const datas = [
     superficie: "1hectar",
     production: 9,
   },
-
   {
     id: 18,
     nom: "Usine de liqueur",

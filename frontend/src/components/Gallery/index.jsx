@@ -38,6 +38,7 @@ export default function Gallery() {
               production={d.production}
               image={d.image}
               realeState={d.realeState}
+              upgrades={d.upgrades}
             />
           );
         })}

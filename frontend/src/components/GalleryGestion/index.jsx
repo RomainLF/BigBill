@@ -1,12 +1,13 @@
 import SGallery from "./style";
 import Card from "@components/Card";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import statsContext from "@services/contexts";
 import CardVente from "@components/CardVente";
 import Upgrade from "@components/Upgrade";
 
 export default function Gallery() {
-  const { data } = useContext(statsContext);
+  const { data, setData } = useContext(statsContext);
+
   return (
     <SGallery>
       {data
@@ -39,7 +40,8 @@ export default function Gallery() {
               production={d.production}
               image={d.image}
               realeState={d.realeState}
-              upgrade={<Upgrade profit={d.profit} />}
+              upgrades={d.upgrades}
+              upgrade={<Upgrade card={d} setData={setData} data={data} />}
             />
           );
         })}

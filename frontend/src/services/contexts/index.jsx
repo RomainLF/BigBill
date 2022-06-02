@@ -58,9 +58,7 @@ export function StatsContext({ children }) {
   const [annualProfit, setAnnualProfit] = useState(0);
   const [modal, setModal] = useState(false);
   const [endGame, setEndGame] = useState(false);
-  const [data, setData] = useState(
-    datas.map((data) => ({ ...data, buy: false }))
-  );
+  const [data, setData] = useState(datas.map((el) => ({ ...el, buy: false })));
   //const [investissement, setInvestissement] = useState([]);
   //const [quantity, setQuantity] = useState(0);
 
