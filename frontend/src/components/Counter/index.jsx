@@ -22,17 +22,21 @@ export default function Wallet() {
         <div className="earth elem">
           Particule produite{defineImgEarth()}
           {earth}
+          <span>/11000</span>
         </div>
         <div className="eau elem">
           Cons. eau douce {defineImgEau()} {eau}
+          <span>/11000</span>
         </div>
         <div className="energie elem">
           Cons. eneretique {defineImgEnergie()}
           {energie}
+          <span>/11000</span>
         </div>
         <div className="sol elem">
           Utilisation du sol {defineImgSol()}
           {sol}
+          <span>/11000</span>
         </div>
       </section>
     </SCounter>

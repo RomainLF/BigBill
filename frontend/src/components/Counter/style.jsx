@@ -37,6 +37,10 @@ export default styled.div`
         width: 40%;
         height: 150%;
       }
+      span {
+        font-size: 45%;
+        margin-left: -8%;
+      }
     }
   }
   @media screen and (max-width: 600px) {
