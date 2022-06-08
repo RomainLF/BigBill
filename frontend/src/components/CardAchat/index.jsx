@@ -2,7 +2,6 @@ import SCard from "./style";
 import { useContext } from "react";
 import statsContext from "@services/contexts";
 import { useState } from "react";
-import Upgrade from "@components/Upgrade";
 
 export default function CardAchat(props) {
   const {
@@ -48,17 +47,6 @@ export default function CardAchat(props) {
     setSol(sol + props.utilisation_sol);
   };
 
-  /*const incrementUpgrade = () => {
-    setData(
-      data.map((d) => {
-        if (d.id === props.id) {
-          return { ...d, upgrades: 1 };
-        }
-        return d;
-      })
-    );
-  };*/
-
   const incrementInvest = () => {
     setData(
       data.map((d) => {
@@ -84,7 +72,6 @@ export default function CardAchat(props) {
             incrementSol();
             incrementInvest();
             isSelected(true);
-            //incrementUpgrade();
           }}
         >
           Acheter pour <br />

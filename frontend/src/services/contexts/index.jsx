@@ -59,8 +59,6 @@ export function StatsContext({ children }) {
   const [modal, setModal] = useState(false);
   const [endGame, setEndGame] = useState(false);
   const [data, setData] = useState(datas.map((el) => ({ ...el, buy: false })));
-  //const [investissement, setInvestissement] = useState([]);
-  //const [quantity, setQuantity] = useState(0);
 
   useInterval(() => {
     if (timerActive) setTimer((prevState) => prevState + 1);
