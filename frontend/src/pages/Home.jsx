@@ -39,9 +39,14 @@ export default function Home() {
                 <li>Vous avez jusqu'a l'année 2100 pour investir </li>
               </ul>
             </div>
-            <div className="news">
-              <div className="titleNews">PROCHAINEMENT</div>
-            </div>
+            <section className="twodiv">
+              <div className="news">
+                <div className="titleNews">PROCHAINEMENT</div>
+              </div>
+              <div className="know">
+                <div className="titleNews">A SAVOIR</div>
+              </div>
+            </section>
           </section>
         </div>
       </SHome>

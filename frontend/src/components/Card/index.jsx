@@ -5,21 +5,8 @@ import { useState } from "react";
 import useInterval from "./../../services/contexts/useInterval";
 
 export default function Card(props) {
-  const {
-    money,
-    setMoney,
-    timerActive,
-    earth,
-    setEarth,
-    annualProfit,
-    setAnnualProfit,
-    eau,
-    setEau,
-    sol,
-    setSol,
-    energie,
-    setEnergie,
-  } = useContext(statsContext);
+  const { money, setMoney, timerActive, annualProfit, setAnnualProfit } =
+    useContext(statsContext);
 
   const [nb, setNb] = useState(0);
 
