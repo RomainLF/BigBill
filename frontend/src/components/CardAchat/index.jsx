@@ -4,22 +4,8 @@ import statsContext from "@services/contexts";
 import { useState } from "react";
 
 export default function CardAchat(props) {
-  const {
-    money,
-    setMoney,
-    earth,
-    setEarth,
-    annualProfit,
-    setAnnualProfit,
-    eau,
-    setEau,
-    sol,
-    setSol,
-    energie,
-    setEnergie,
-    setData,
-    data,
-  } = useContext(statsContext);
+  const { money, setMoney, annualProfit, setAnnualProfit, setData, data } =
+    useContext(statsContext);
 
   const [selected, isSelected] = useState(false);
   //========  €  =======//
@@ -29,22 +15,6 @@ export default function CardAchat(props) {
   //Incremente les profits par an//
   const incrementAnnualProfit = () => {
     setAnnualProfit(annualProfit + props.profit);
-  };
-  const incrementEarth = () => {
-    setEarth(earth + props.impact_ecologique);
-  };
-  //Incremente l'Eau//
-  const incrementEau = () => {
-    setEau(eau + props.consommation_eau);
-  };
-  //Incremente energie//
-  const incrementEnergie = () => {
-    const nrj = energie;
-    setEnergie(nrj + props.consommation_energetique);
-  };
-  //Incremente sol//
-  const incrementSol = () => {
-    setSol(sol + props.utilisation_sol);
   };
 
   const incrementInvest = () => {
@@ -66,10 +36,6 @@ export default function CardAchat(props) {
           onClick={() => {
             deIncrementMoney();
             incrementAnnualProfit();
-            incrementEarth();
-            incrementEau();
-            incrementEnergie();
-            incrementSol();
             incrementInvest();
             isSelected(true);
           }}
