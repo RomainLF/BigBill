@@ -8,7 +8,27 @@ export default function Gallery() {
   return (
     <SGallery>
       {datajobs.map((d) => {
-        return <CardJobs />;
+        return (
+          <CardJobs
+            key={d.id}
+            nom={d.nom}
+            role={d.role}
+            language={d.language}
+            soft_skill={d.soft_skill}
+            centre_interet={d.centre_interet}
+            diplome={d.diplome}
+            bio={d.bio}
+            contrat={d.contrat}
+            duree={d.duree}
+            contact={d.contact}
+            price={d.price}
+            profit={d.profit}
+            impact_ecologique={d.impact_ecologique}
+            consommation_eau={d.consommation_eau}
+            consommation_energetique={d.consommation_energetique}
+            utilisation_sol={d.utilisation_sol}
+          />
+        );
       })}
     </SGallery>
   );
