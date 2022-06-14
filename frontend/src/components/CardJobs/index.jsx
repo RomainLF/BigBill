@@ -60,7 +60,7 @@ export default function Card(props) {
           <section className="mainProfit">
             <div className="titleProfit">Profit</div>
             <div className="litleStatsProfit">
-              {props.profit}
+              <p>{props.profit}</p>
               <span> $/an</span>
             </div>
           </section>
@@ -84,6 +84,7 @@ export default function Card(props) {
           <span> $/an</span>
         </div>
         {props.buttonAddJobs}
+        {props.buttonAddPromotion}
       </section>
     </SCardjobs>
   );

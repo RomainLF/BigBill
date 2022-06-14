@@ -75,6 +75,9 @@ export default styled.div`
       .sol {
         margin-left: 7.2rem;
       }
+      span {
+        color: #b00000;
+      }
     }
   }
   .mainProfit {
@@ -92,6 +95,9 @@ export default styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+      p {
+        font-weight: 900;
+      }
     }
     .titleProfit {
       background-color: #00487d;

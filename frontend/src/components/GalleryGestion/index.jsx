@@ -5,7 +5,7 @@ import statsContext from "@services/contexts";
 import CardVente from "@components/CardVente";
 import Upgrade from "@components/Upgrade";
 import CardJobs from "@components/CardJobs";
-import ButtonJobs from "@components/ButtonJobs";
+import ButtonPromotion from "@components/ButtonPromotion";
 
 export default function Gallery() {
   const { data, setData, datajobs } = useContext(statsContext);
@@ -71,8 +71,8 @@ export default function Gallery() {
               consommation_eau={d.consommation_eau}
               consommation_energetique={d.consommation_energetique}
               utilisation_sol={d.utilisation_sol}
-              buttonAddJobs={
-                <ButtonJobs
+              buttonAddPromotion={
+                <ButtonPromotion
                   key={d.id}
                   nom={d.nom}
                   contrat={d.contrat}

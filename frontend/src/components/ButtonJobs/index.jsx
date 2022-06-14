@@ -1,7 +1,6 @@
 import SButtonJobs from "./style";
 import { useContext } from "react";
 import statsContext from "@services/contexts";
-import { useState } from "react";
 
 export default function ButtonJobs(props) {
   const {

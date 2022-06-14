@@ -116,6 +116,16 @@ export function StatsContext({ children }) {
         };
       }
     });
+    datajobs.forEach((product) => {
+      if (product.buy === true) {
+        incrementForYear = {
+          eau: incrementForYear.eau + product.consommation_eau,
+          sol: incrementForYear.sol + product.utilisation_sol,
+          energie: incrementForYear.energie + product.consommation_energetique,
+          particule: incrementForYear.particule + product.impact_ecologique,
+        };
+      }
+    });
     setEau((eau) => eau + incrementForYear.eau);
     setSol((sol) => sol + incrementForYear.sol);
     setEnergie((energie) => energie + incrementForYear.energie);
