@@ -1,15 +1,20 @@
-import SCard from "./style";
+import SButtonJobs from "./style";
 import { useContext } from "react";
 import statsContext from "@services/contexts";
-import { useState } from "react";
 
-export default function CardAchat(props) {
-  const { money, setMoney, annualProfit, setAnnualProfit, setData, data } =
-    useContext(statsContext);
+export default function ButtonJobs(props) {
+  const {
+    money,
+    setMoney,
+    annualProfit,
+    setAnnualProfit,
+    datajobs,
+    setDatajobs,
+  } = useContext(statsContext);
 
-  //========  €  =======//
+  //========  $  =======//
   const deIncrementMoney = () => {
-    setMoney(money - props.cout_achat);
+    setMoney(money - props.price);
   };
   //Incremente les profits par an//
   const incrementAnnualProfit = () => {
@@ -17,8 +22,8 @@ export default function CardAchat(props) {
   };
 
   const incrementInvest = () => {
-    setData(
-      data.map((d) => {
+    setDatajobs(
+      datajobs.map((d) => {
         if (d.id === props.id) {
           return { ...d, buy: true };
         }
@@ -28,7 +33,7 @@ export default function CardAchat(props) {
   };
 
   return (
-    <SCard>
+    <SButtonJobs>
       <div className="center">
         <button
           className="plus"
@@ -38,10 +43,9 @@ export default function CardAchat(props) {
             incrementInvest();
           }}
         >
-          Acheter pour <br />
-          {props.cout_achat} €
+          Prendre {props.nom} en {props.contrat}
         </button>
       </div>
-    </SCard>
+    </SButtonJobs>
   );
 }

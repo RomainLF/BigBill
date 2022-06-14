@@ -1,6 +1,7 @@
 import SCounter from "./style";
 import { useContext } from "react";
 import statsContext from "../../services/contexts/index";
+import ModalEvents from "@components/ModalEvents";
 
 export default function Wallet() {
   const {
@@ -39,6 +40,7 @@ export default function Wallet() {
           <span>/11000</span>
         </div>
       </section>
+      <ModalEvents />
     </SCounter>
   );
 }

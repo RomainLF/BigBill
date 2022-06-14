@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { Chart } from "chart.js";
 import datas from "@assets/data";
 import datasjobs from "@assets/datajobs";
 import useInterval from "./useInterval";
@@ -48,7 +49,7 @@ const statsContext = createContext();
 export default statsContext;
 
 export function StatsContext({ children }) {
-  const [timer, setTimer] = useState(2022);
+  const [timer, setTimer] = useState(2028);
   const [money, setMoney] = useState(400000);
   const [earth, setEarth] = useState(0);
   const [eau, setEau] = useState(0);
@@ -60,8 +61,11 @@ export function StatsContext({ children }) {
   const [modal, setModal] = useState(false);
   const [endGame, setEndGame] = useState(false);
   const [data, setData] = useState(datas.map((el) => ({ ...el, buy: false })));
-  const [datajobs, setDatajobs] = useState(datasjobs);
-  const [currentEvent, setCurrentEvent] = useState(null);
+  const [datajobs, setDatajobs] = useState(
+    datasjobs.map((el) => ({ ...el, buy: false }))
+  );
+  const [currentEvent, setCurrentEvent] = useState(undefined);
+  const [eventModal, setEventModal] = useState(false);
 
   const events = [
     {
@@ -103,6 +107,16 @@ export function StatsContext({ children }) {
     if (timerActive === true) setTimer((prevState) => prevState + 1);
     let incrementForYear = { eau: 0, sol: 0, energie: 0, particule: 0 };
     data.forEach((product) => {
+      if (product.buy === true) {
+        incrementForYear = {
+          eau: incrementForYear.eau + product.consommation_eau,
+          sol: incrementForYear.sol + product.utilisation_sol,
+          energie: incrementForYear.energie + product.consommation_energetique,
+          particule: incrementForYear.particule + product.impact_ecologique,
+        };
+      }
+    });
+    datajobs.forEach((product) => {
       if (product.buy === true) {
         incrementForYear = {
           eau: incrementForYear.eau + product.consommation_eau,
@@ -287,6 +301,8 @@ export function StatsContext({ children }) {
         setDatajobs,
         handleEventChoice,
         currentEvent,
+        eventModal,
+        setEventModal,
       }}
     >
       {children}
