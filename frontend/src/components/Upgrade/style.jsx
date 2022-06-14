@@ -27,6 +27,9 @@ export default styled.div`
         border: none;
         border-radius: 0.2rem;
       }
+      .active {
+        background: linear-gradient(to right, #008602 15%, #6ea770 100%);
+      }
     }
     .up {
       height: 1.8rem;
@@ -34,11 +37,25 @@ export default styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+      .price {
+        display: none;
+      }
       p {
         color: #c1b876;
       }
     }
   }
+  &:hover {
+    .up {
+      .price {
+        display: flex;
+      }
+      .uptxt {
+        display: none;
+      }
+    }
+  }
+
   @media screen and (max-width: 600px) {
   }
 `;

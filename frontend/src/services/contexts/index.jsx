@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
+import { Chart } from "chart.js";
 import datas from "@assets/data";
+import datasjobs from "@assets/datajobs";
 import useInterval from "./useInterval";
 import imgVide from "../../assets/Compte/Vide.png";
 import imgEarth2 from "../../assets/Compte/earth-1.png";
@@ -47,26 +49,108 @@ const statsContext = createContext();
 export default statsContext;
 
 export function StatsContext({ children }) {
-  const [timer, setTimer] = useState(2022);
+  const [timer, setTimer] = useState(2028);
   const [money, setMoney] = useState(400000);
   const [earth, setEarth] = useState(0);
   const [eau, setEau] = useState(0);
   const [energie, setEnergie] = useState(0);
   const [sol, setSol] = useState(0);
-  const [impacctEcolo, setImpactEcolo] = useState(0);
+  const [impactEcolo, setImpactEcolo] = useState(0);
   const [timerActive, setTimerActive] = useState(false);
   const [annualProfit, setAnnualProfit] = useState(0);
   const [modal, setModal] = useState(false);
   const [endGame, setEndGame] = useState(false);
-  const [data, setData] = useState(
-    datas.map((data) => ({ ...data, buy: false }))
+  const [data, setData] = useState(datas.map((el) => ({ ...el, buy: false })));
+  const [datajobs, setDatajobs] = useState(
+    datasjobs.map((el) => ({ ...el, buy: false }))
   );
-  //const [investissement, setInvestissement] = useState([]);
-  //const [quantity, setQuantity] = useState(0);
+  const [currentEvent, setCurrentEvent] = useState(undefined);
+  const [eventModal, setEventModal] = useState(false);
+
+  const events = [
+    {
+      id: 1,
+      title: "",
+      message: "",
+      timerTrigger: 2030,
+      moneyImpact: -3000,
+      eau: 0,
+      sol: 0,
+      particule: 0,
+      energie: 0,
+    },
+    {
+      id: 2,
+      title: "",
+      message: "",
+      timerTrigger: 2040,
+      moneyImpact: -1000,
+      eau: 50,
+      sol: 0,
+      particule: 50,
+      energie: 0,
+    },
+    {
+      id: 3,
+      title: "",
+      message: "",
+      timerTrigger: 2030,
+      moneyImpact: -3000,
+      eau: 0,
+      sol: 50,
+      particule: 0,
+      energie: 50,
+    },
+  ];
 
   useInterval(() => {
-    if (timerActive) setTimer((prevState) => prevState + 1);
+    if (timerActive === true) setTimer((prevState) => prevState + 1);
+    let incrementForYear = { eau: 0, sol: 0, energie: 0, particule: 0 };
+    data.forEach((product) => {
+      if (product.buy === true) {
+        incrementForYear = {
+          eau: incrementForYear.eau + product.consommation_eau,
+          sol: incrementForYear.sol + product.utilisation_sol,
+          energie: incrementForYear.energie + product.consommation_energetique,
+          particule: incrementForYear.particule + product.impact_ecologique,
+        };
+      }
+    });
+    datajobs.forEach((product) => {
+      if (product.buy === true) {
+        incrementForYear = {
+          eau: incrementForYear.eau + product.consommation_eau,
+          sol: incrementForYear.sol + product.utilisation_sol,
+          energie: incrementForYear.energie + product.consommation_energetique,
+          particule: incrementForYear.particule + product.impact_ecologique,
+        };
+      }
+    });
+    setEau((eau) => eau + incrementForYear.eau);
+    setSol((sol) => sol + incrementForYear.sol);
+    setEnergie((energie) => energie + incrementForYear.energie);
+    setEarth((particule) => particule + incrementForYear.particule);
+    const hasEventForCurrentTimer = events.find(
+      (e) => e.timerTrigger === timer
+    );
+    if (hasEventForCurrentTimer) {
+      setCurrentEvent(hasEventForCurrentTimer);
+      setTimerActive(false);
+    }
   }, 5000);
+
+  const handleEventChoice = (accept) => {
+    if (!accept) {
+      setMoney((money) => money - currentEvent.moneyImpact);
+    } else {
+      setEau((water) => water + currentEvent.eau);
+      setSol((sol) => sol + currentEvent.sol);
+      setEnergie((energie) => energie + currentEvent.energie);
+      setEarth((particule) => particule + currentEvent.particule);
+    }
+    setTimerActive(true);
+    setCurrentEvent(null);
+  };
 
   const reset = () => {
     setTimerActive(false);
@@ -191,7 +275,7 @@ export function StatsContext({ children }) {
         setTimerActive,
         money,
         setMoney,
-        impacctEcolo,
+        impactEcolo,
         setImpactEcolo,
         reset,
         annualProfit,
@@ -211,12 +295,14 @@ export function StatsContext({ children }) {
         setEnergie,
         sol,
         setSol,
-        /*investissement,
-        setInvestissement,
-        quantity,
-        setQuantity,*/
         data,
         setData,
+        datajobs,
+        setDatajobs,
+        handleEventChoice,
+        currentEvent,
+        eventModal,
+        setEventModal,
       }}
     >
       {children}

@@ -5,21 +5,8 @@ import { useState } from "react";
 import useInterval from "./../../services/contexts/useInterval";
 
 export default function Card(props) {
-  const {
-    money,
-    setMoney,
-    timerActive,
-    earth,
-    setEarth,
-    annualProfit,
-    setAnnualProfit,
-    eau,
-    setEau,
-    sol,
-    setSol,
-    energie,
-    setEnergie,
-  } = useContext(statsContext);
+  const { money, setMoney, timerActive, annualProfit, setAnnualProfit } =
+    useContext(statsContext);
 
   const [nb, setNb] = useState(0);
 
@@ -35,26 +22,16 @@ export default function Card(props) {
     if (timerActive) setAnnualProfit(props.profit * nb);
   }, 5000);
 
-  //========  actualisation chaque année des stats  ========//
-  useInterval(() => {
-    //rajouter (timerActive 11)
-    if (timerActive) setEarth(earth + props.impact_ecologique * nb);
-  }, 5000);
-  useInterval(() => {
-    if (timerActive) setEau(eau + props.consommation_eau * nb);
-  }, 5000);
-  useInterval(() => {
-    if (timerActive) setEnergie(energie + props.consommation_energetique * nb);
-  }, 5000);
-  useInterval(() => {
-    if (timerActive) setSol(sol + props.utilisation_sol * nb);
-  }, 5000);
+  const getAttributeValue = (attribute) => {
+    const multiplier = 1.2 * (props.upgrades || 0);
+    return attribute * (multiplier || 1);
+  };
 
   return (
     <SCard>
       <h1>{props.nom}</h1>
       <div className="profits">
-        Profits : <span>{props.profit}</span>€ /ans
+        Profits : <span>{getAttributeValue(props.profit)}</span>€ /ans
       </div>
       <table>
         <thead>

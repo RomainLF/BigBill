@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export default styled.section`
   font-weight: Bold;
-  text-shadow: 5px 2px 2px #fbb7a2;
   height: 94vh;
 
   .start {
@@ -26,13 +25,69 @@ export default styled.section`
         background-color: #00487d;
         margin: 1rem;
         border-radius: 1rem;
+        overflow: hidden;
+        .titleGame {
+          background-color: #aaaaaa;
+          border: 0.2em solid #00487d;
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+          box-shadow: none;
+          height: 5vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        ul {
+          margin-top: -1em;
+
+          li {
+            margin-top: 2em;
+            margin-left: 1em;
+          }
+        }
       }
-      .news {
-        width: 45%;
+      .twodiv {
+        width: 55%;
         height: 95%;
-        background-color: #000000;
-        margin: 1rem;
-        border-radius: 1rem;
+        margin-top: -4%;
+        .news {
+          width: 90%;
+          height: 70%;
+          background-color: #000000;
+          margin: 1rem;
+          border-radius: 1rem;
+          .titleNews {
+            background-color: #aaaaaa;
+            border: 0.2em solid #000000;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            box-shadow: none;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+          }
+        }
+        .know {
+          width: 90%;
+          height: 27%;
+          background-color: #000000;
+          margin: 1rem;
+          border-radius: 1rem;
+          .titleNews {
+            background-color: #aaaaaa;
+            border: 0.2em solid #000000;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            box-shadow: none;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+          }
+        }
       }
     }
     .autre {

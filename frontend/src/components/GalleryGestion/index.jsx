@@ -1,12 +1,15 @@
 import SGallery from "./style";
 import Card from "@components/Card";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import statsContext from "@services/contexts";
 import CardVente from "@components/CardVente";
 import Upgrade from "@components/Upgrade";
+import CardJobs from "@components/CardJobs";
+import ButtonPromotion from "@components/ButtonPromotion";
 
 export default function Gallery() {
-  const { data } = useContext(statsContext);
+  const { data, setData, datajobs } = useContext(statsContext);
+
   return (
     <SGallery>
       {data
@@ -39,7 +42,44 @@ export default function Gallery() {
               production={d.production}
               image={d.image}
               realeState={d.realeState}
-              upgrade={<Upgrade profit={d.profit} />}
+              upgrades={d.upgrades}
+              upgrade={<Upgrade card={d} setData={setData} data={data} />}
+            />
+          );
+        })}
+      {datajobs
+        .filter((d) => d.buy === true)
+        .map((d) => {
+          return (
+            <CardJobs
+              key={d.id}
+              id={d.id}
+              nom={d.nom}
+              famille={d.famille}
+              role={d.role}
+              language={d.language}
+              soft_skill={d.soft_skill}
+              centre_interet={d.centre_interet}
+              diplome={d.diplome}
+              bio={d.bio}
+              contrat={d.contrat}
+              duree={d.duree}
+              contact={d.contact}
+              price={d.price}
+              profit={d.profit}
+              impact_ecologique={d.impact_ecologique}
+              consommation_eau={d.consommation_eau}
+              consommation_energetique={d.consommation_energetique}
+              utilisation_sol={d.utilisation_sol}
+              buttonAddPromotion={
+                <ButtonPromotion
+                  key={d.id}
+                  nom={d.nom}
+                  contrat={d.contrat}
+                  profit={d.profit}
+                  price={d.price}
+                />
+              }
             />
           );
         })}
