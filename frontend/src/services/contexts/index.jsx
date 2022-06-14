@@ -61,7 +61,9 @@ export function StatsContext({ children }) {
   const [modal, setModal] = useState(false);
   const [endGame, setEndGame] = useState(false);
   const [data, setData] = useState(datas.map((el) => ({ ...el, buy: false })));
-  const [datajobs, setDatajobs] = useState(datasjobs);
+  const [datajobs, setDatajobs] = useState(
+    datasjobs.map((el) => ({ ...el, buy: false }))
+  );
   const [currentEvent, setCurrentEvent] = useState(undefined);
   const [eventModal, setEventModal] = useState(false);
 
