@@ -10,6 +10,7 @@ export default styled.div`
     width: 19rem;
     height: 11rem;
     background-color: #ffffff;
+    border: solid 0.2em #00487d;
   }
   @media screen and (max-width: 600px) {
     display: none;
