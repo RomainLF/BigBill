@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { Chart } from "chart.js";
+//import { Chart } from "chart.js";
 import datas from "@assets/data";
 import datasjobs from "@assets/datajobs";
 import useInterval from "./useInterval";
@@ -49,7 +49,7 @@ const statsContext = createContext();
 export default statsContext;
 
 export function StatsContext({ children }) {
-  const [timer, setTimer] = useState(2028);
+  const [timer, setTimer] = useState(2022);
   const [money, setMoney] = useState(400000);
   const [earth, setEarth] = useState(0);
   const [eau, setEau] = useState(0);
@@ -66,6 +66,8 @@ export function StatsContext({ children }) {
   );
   const [currentEvent, setCurrentEvent] = useState(undefined);
   const [eventModal, setEventModal] = useState(false);
+  const [chartDataYears, setChartDataYears] = useState(["2021"]);
+  const [chartDataProfit, setChartDataProfit] = useState([0]);
 
   const events = [
     {
@@ -137,6 +139,8 @@ export function StatsContext({ children }) {
       setCurrentEvent(hasEventForCurrentTimer);
       setTimerActive(false);
     }
+    setChartDataProfit([...chartDataProfit, annualProfit]);
+    setChartDataYears([...chartDataYears, timer]).toString();
   }, 5000);
 
   const handleEventChoice = (accept) => {
@@ -303,6 +307,10 @@ export function StatsContext({ children }) {
         currentEvent,
         eventModal,
         setEventModal,
+        chartDataYears,
+        setChartDataYears,
+        chartDataProfit,
+        setChartDataProfit,
       }}
     >
       {children}
