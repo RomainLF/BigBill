@@ -38,7 +38,7 @@ const datas = [
   {
     id: 2,
     nom: "Champs de maïs",
-    profit: 350, // profit * (upgrades * 20%)
+    profit: 350,
     impact_ecologique: 124,
     consommation_eau: 275,
     consommation_energetique: 40,
