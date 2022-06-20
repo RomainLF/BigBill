@@ -11,16 +11,13 @@ export default function Card(props) {
   const [nb, setNb] = useState(0);
 
   //========  actualisation chaque année  ========//
-  useInterval(() => {
-    if (timerActive) setMoney(money + props.profit * nb);
-  }, 5000);
 
-  useInterval(() => {
+  /*useInterval(() => {
     if (annualProfit > 1) {
       return annualProfit;
     }
     if (timerActive) setAnnualProfit(props.profit * nb);
-  }, 5000);
+  }, 5000);*/
 
   const getAttributeValue = (attribute) => {
     const multiplier = 1.2 * (props.upgrades || 0);

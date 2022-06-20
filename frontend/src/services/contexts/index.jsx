@@ -49,7 +49,7 @@ const statsContext = createContext();
 export default statsContext;
 
 export function StatsContext({ children }) {
-  const [timer, setTimer] = useState(2022);
+  const [timer, setTimer] = useState(2029);
   const [money, setMoney] = useState(400000);
   const [earth, setEarth] = useState(0);
   const [eau, setEau] = useState(0);
@@ -64,49 +64,15 @@ export function StatsContext({ children }) {
   const [datajobs, setDatajobs] = useState(
     datasjobs.map((el) => ({ ...el, buy: false }))
   );
-  const [currentEvent, setCurrentEvent] = useState(undefined);
+  const [currentEvent, setCurrentEvent] = useState("");
   const [eventModal, setEventModal] = useState(false);
   const [chartDataYears, setChartDataYears] = useState(["2021"]);
   const [chartDataProfit, setChartDataProfit] = useState([0]);
-
-  const events = [
-    {
-      id: 1,
-      title: "",
-      message: "",
-      timerTrigger: 2030,
-      moneyImpact: -3000,
-      eau: 0,
-      sol: 0,
-      particule: 0,
-      energie: 0,
-    },
-    {
-      id: 2,
-      title: "",
-      message: "",
-      timerTrigger: 2040,
-      moneyImpact: -1000,
-      eau: 50,
-      sol: 0,
-      particule: 50,
-      energie: 0,
-    },
-    {
-      id: 3,
-      title: "",
-      message: "",
-      timerTrigger: 2030,
-      moneyImpact: -3000,
-      eau: 0,
-      sol: 50,
-      particule: 0,
-      energie: 50,
-    },
-  ];
+  const [todo, setTodo] = useState(1);
 
   useInterval(() => {
     if (timerActive === true) setTimer((prevState) => prevState + 1);
+    if (timerActive === true) setMoney(money + annualProfit);
     let incrementForYear = { eau: 0, sol: 0, energie: 0, particule: 0 };
     data.forEach((product) => {
       if (product.buy === true) {
@@ -128,29 +94,74 @@ export function StatsContext({ children }) {
         };
       }
     });
-    setEau((eau) => eau + incrementForYear.eau);
-    setSol((sol) => sol + incrementForYear.sol);
-    setEnergie((energie) => energie + incrementForYear.energie);
-    setEarth((particule) => particule + incrementForYear.particule);
-    const hasEventForCurrentTimer = events.find(
+    if (timerActive === true) setEau((eau) => eau + incrementForYear.eau);
+    if (timerActive === true) setSol((sol) => sol + incrementForYear.sol);
+    if (timerActive === true)
+      setEnergie((energie) => energie + incrementForYear.energie);
+    if (timerActive === true)
+      setEarth((particule) => particule + incrementForYear.particule);
+    const hasEventForCurrentTimer = events.filter(
       (e) => e.timerTrigger === timer
     );
-    if (hasEventForCurrentTimer) {
+    if (hasEventForCurrentTimer[0]) {
       setCurrentEvent(hasEventForCurrentTimer);
+      setTodo(todo + 1);
       setTimerActive(false);
     }
-    setChartDataProfit([...chartDataProfit, annualProfit]);
-    setChartDataYears([...chartDataYears, timer]).toString();
+    if (timerActive === true)
+      setChartDataProfit([...chartDataProfit, annualProfit]);
+    if (timerActive === true)
+      setChartDataYears([...chartDataYears, timer]).toString();
   }, 5000);
 
   const handleEventChoice = (accept) => {
     if (!accept) {
-      setMoney((money) => money - currentEvent.moneyImpact);
+      setMoney(
+        (money) =>
+          money -
+          events
+            .filter((el) => el.id === todo)
+            .map((el) => {
+              return el.moneyImpact;
+            })
+      );
     } else {
-      setEau((water) => water + currentEvent.eau);
-      setSol((sol) => sol + currentEvent.sol);
-      setEnergie((energie) => energie + currentEvent.energie);
-      setEarth((particule) => particule + currentEvent.particule);
+      setEau(
+        (eau) =>
+          eau +
+          events
+            .filter((el) => el.id === todo)
+            .map((el) => {
+              return el.eau;
+            })
+      );
+      setSol(
+        (sol) =>
+          sol +
+          events
+            .filter((el) => el.id === todo)
+            .map((el) => {
+              return el.sol;
+            })
+      );
+      setEnergie(
+        (energie) =>
+          energie +
+          events
+            .filter((el) => el.id === todo)
+            .map((el) => {
+              return el.energie;
+            })
+      );
+      setEarth(
+        (particule) =>
+          particule +
+          events
+            .filter((el) => el.id === todo)
+            .map((el) => {
+              return el.energie;
+            })
+      );
     }
     setTimerActive(true);
     setCurrentEvent(null);
@@ -159,6 +170,14 @@ export function StatsContext({ children }) {
   const reset = () => {
     setTimerActive(false);
     setTimer(0);
+  };
+
+  const endGameFunc = () => {
+    if (earth >= 5000 || timer >= 2060 || money <= 0) {
+      setEndGame(true);
+      reset();
+      setModal(true);
+    }
   };
 
   const defineImgEarth = () => {
@@ -262,13 +281,47 @@ export function StatsContext({ children }) {
     }
   };
 
-  const endGameFunc = () => {
-    if (earth >= 5000 || timer >= 2060 || money <= 0) {
-      setEndGame(true);
-      reset();
-      setModal(true);
-    }
-  };
+  const events = [
+    {
+      id: 1,
+      title: "COP30",
+      message:
+        "Lorem ipsum dolor sit amet. Qui voluptatem nihil aut aspernatur est iusto animi quo libero nisi. Est molestiae doloremque et dolore deleniti in eaque omnis. Sit molestiae tenetur et soluta iusto aut obcaecati vitae At tenetur deleniti!",
+      timerTrigger: 2030,
+      moneyImpact: 8000,
+      eau: 200,
+      sol: 50,
+      particule: 200,
+      energie: 120,
+      todo: false,
+    },
+    {
+      id: 2,
+      title: "COP40",
+      message:
+        "Lorem ipsum dolor sit amet. Qui voluptatem nihil aut aspernatur est iusto animi quo libero nisi. Est molestiae doloremque et dolore deleniti in eaque omnis. Sit molestiae tenetur et soluta iusto aut obcaecati vitae At tenetur deleniti! ",
+      timerTrigger: 2040,
+      moneyImpact: 10000,
+      eau: 0,
+      sol: 0,
+      particule: 900,
+      energie: 450,
+      todo: false,
+    },
+    {
+      id: 3,
+      title: "COP50",
+      message:
+        "Lorem ipsum dolor sit amet. Qui voluptatem nihil aut aspernatur est iusto animi quo libero nisi. Est molestiae doloremque et dolore deleniti in eaque omnis. Sit molestiae tenetur et soluta iusto aut obcaecati vitae At tenetur deleniti!",
+      timerTrigger: 2050,
+      moneyImpact: 30000,
+      eau: 0,
+      sol: 300,
+      particule: 300,
+      energie: 300,
+      todo: false,
+    },
+  ];
 
   return (
     <statsContext.Provider
@@ -311,6 +364,9 @@ export function StatsContext({ children }) {
         setChartDataYears,
         chartDataProfit,
         setChartDataProfit,
+        events,
+        todo,
+        setTodo,
       }}
     >
       {children}
