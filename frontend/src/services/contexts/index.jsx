@@ -126,42 +126,30 @@ export function StatsContext({ children }) {
             })
       );
     } else {
-      setEau(
-        (eau) =>
-          eau +
-          events
-            .filter((el) => el.id === todo)
-            .map((el) => {
-              return el.eau;
-            })
-      );
-      setSol(
-        (sol) =>
-          sol +
-          events
-            .filter((el) => el.id === todo)
-            .map((el) => {
-              return el.sol;
-            })
-      );
-      setEnergie(
-        (energie) =>
-          energie +
-          events
-            .filter((el) => el.id === todo)
-            .map((el) => {
-              return el.energie;
-            })
-      );
-      setEarth(
-        (particule) =>
-          particule +
-          events
-            .filter((el) => el.id === todo)
-            .map((el) => {
-              return el.energie;
-            })
-      );
+      const newDataEau = events
+        .filter((el) => el.id === todo)
+        .map((el) => {
+          return el.eau;
+        });
+      const newDataSol = events
+        .filter((el) => el.id === todo)
+        .map((el) => {
+          return el.sol;
+        });
+      const newDataEnergie = events
+        .filter((el) => el.id === todo)
+        .map((el) => {
+          return el.energie;
+        });
+      const newDataEarth = events
+        .filter((el) => el.id === todo)
+        .map((el) => {
+          return el.particule;
+        });
+      setEau((eau) => eau + newDataEau[0]);
+      setSol((sol) => sol + newDataSol[0]);
+      setEnergie((energie) => energie + newDataEnergie[0]);
+      setEarth((earth) => earth + newDataEarth[0]);
     }
     setTimerActive(true);
     setCurrentEvent(null);
