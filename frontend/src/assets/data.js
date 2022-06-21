@@ -48,7 +48,7 @@ const datas = [
     cout_achat: 76673,
     superficie: "1hectar",
     production: 100,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
