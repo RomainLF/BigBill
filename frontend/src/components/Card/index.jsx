@@ -8,23 +8,10 @@ export default function Card(props) {
   const { money, setMoney, timerActive, annualProfit, setAnnualProfit } =
     useContext(statsContext);
 
-  const [nb, setNb] = useState(0);
-
-  //========  actualisation chaque année  ========//
-  useInterval(() => {
-    if (timerActive) setMoney(money + props.profit * nb);
-  }, 5000);
-
-  useInterval(() => {
-    if (annualProfit > 1) {
-      return annualProfit;
-    }
-    if (timerActive) setAnnualProfit(props.profit * nb);
-  }, 5000);
-
   const getAttributeValue = (attribute) => {
-    const multiplier = 1.2 * (props.upgrades || 0);
-    return attribute * (multiplier || 1);
+    const multiplier = 1.2 * (props.upgrades || 1);
+    const resultUpgrade = Math.round(attribute * (multiplier || 1));
+    return resultUpgrade;
   };
 
   return (

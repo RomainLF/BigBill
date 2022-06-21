@@ -7,16 +7,6 @@ import useInterval from "./../../services/contexts/useInterval";
 
 export default function Charte() {
   const { chartDataYears, chartDataProfit } = useContext(StatsContext);
-  //const { annualProfit, timer, timerActive } = useContext(StatsContext);
-
-  //const [chartDataYears, setChartDataYears] = useState(["2022"]);
-  //const [chartDataProfit, setChartDataProfit] = useState(["0"]);
-  // Passer dans le context
-  /*useInterval(() => {
-    if (timerActive) setChartDataYears([...chartDataYears, timer]).toString();
-    setChartDataProfit(chartDataProfit.splice(0, 1, annualProfit)).toString();
-    console.log(chartDataProfit);
-  }, 5000); */
 
   const data = {
     labels: chartDataYears.map((data) => data),
@@ -24,6 +14,7 @@ export default function Charte() {
       {
         label: "Benefice par an",
         data: chartDataProfit,
+        backgroundColor: "#ec947a",
       },
     ],
   };
