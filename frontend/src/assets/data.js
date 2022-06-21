@@ -32,7 +32,7 @@ const datas = [
     cout_achat: 213160,
     superficie: "1hectar",
     production: 10,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -64,7 +64,7 @@ const datas = [
     cout_achat: 41218,
     superficie: "1hectar",
     production: 80,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -80,7 +80,7 @@ const datas = [
     cout_achat: 19343,
     superficie: "1hectar",
     production: 0.6,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {

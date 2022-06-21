@@ -11,7 +11,7 @@ export default function Card(props) {
   const getAttributeValue = (attribute) => {
     const multiplier = 1.2 * (props.upgrades || 1);
     const resultUpgrade = Math.round(attribute * (multiplier || 1));
-    return resultUpgrade;
+    return Math.round(resultUpgrade * 0.8333);
   };
 
   return (

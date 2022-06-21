@@ -3,18 +3,12 @@ import { useContext } from "react";
 import statsContext from "@services/contexts";
 
 export default function CardVente(props) {
-  const {
-    money,
-    setMoney,
-    annualProfit,
-    setAnnualProfit,
-    investissement,
-    setInvestissement,
-  } = useContext(statsContext);
+  const { money, setMoney, annualProfit, setAnnualProfit, setData, data } =
+    useContext(statsContext);
 
   //========  €  =======//
   const deIncrementMoney = () => {
-    setMoney(money - props.cout_achat);
+    setMoney(money + props.cout_achat);
   };
   //Incremente les profits par an//
   const deIncrementAnnualProfit = () => {
@@ -22,8 +16,14 @@ export default function CardVente(props) {
   };
 
   const deIncrementInvest = () => {
-    // setInvestissement(investissement);
-    setInvestissement([...investissement, props.id]);
+    setData(
+      data.map((d) => {
+        if (d.id === props.id) {
+          return { ...d, buy: false };
+        }
+        return d;
+      })
+    );
   };
 
   return (
