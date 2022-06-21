@@ -9,8 +9,9 @@ export default function Card(props) {
     useContext(statsContext);
 
   const getAttributeValue = (attribute) => {
-    const multiplier = 1.2 * (props.upgrades || 0);
-    return attribute * (multiplier || 1);
+    const multiplier = 1.2 * (props.upgrades || 1);
+    const resultUpgrade = Math.round(attribute * (multiplier || 1));
+    return resultUpgrade;
   };
 
   return (

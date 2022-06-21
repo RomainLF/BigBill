@@ -8,10 +8,17 @@ export default function Upgrade({ card, setData, data }) {
 
   const [cardUpgrades, setCardUpgrades] = useState(card.upgrades);
 
-  const addUpgrade = () => {
+  /*const addUpgrade = () => {
     const element = data.find((el) => el.id === card.id);
     const newElements = data.filter((el) => el.id !== card.id);
     setData([...newElements, { ...element, upgrades: element.upgrades + 1 }]);
+    setCardUpgrades(cardUpgrades + 1);
+    setMoney(money - 10000);
+  };*/
+  const addUpgrade = () => {
+    const element = data.find((el) => el.id === card.id);
+    const newElements = data.filter((el) => el.id !== card.id);
+    setData([...newElements, { ...element, upgrades: element.upgrades + 0.2 }]);
     setCardUpgrades(cardUpgrades + 1);
     setMoney(money - 10000);
   };
