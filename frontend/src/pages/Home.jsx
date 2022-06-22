@@ -45,6 +45,12 @@ export default function Home() {
               </div>
               <div className="know">
                 <div className="titleNews">A SAVOIR</div>
+                <p>
+                  Toutes les données présente sur BigBill invest vienne de:
+                  <a href="https://agribalyse.ademe.fr/">
+                    https://agribalyse.ademe.fr/
+                  </a>
+                </p>
               </div>
             </section>
           </section>

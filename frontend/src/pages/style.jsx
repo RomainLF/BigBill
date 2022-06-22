@@ -87,6 +87,10 @@ export default styled.section`
             justify-content: center;
             color: #000000;
           }
+          p {
+            color: #aaaaaa;
+            margin-top: 10%;
+          }
         }
       }
     }
@@ -100,7 +104,7 @@ export default styled.section`
       flex-direction: column;
       margin: 2rem;
       img {
-        width: 80%;
+        width: 100%;
         aspect-ratio: 1/1;
         margin-top: -20vh;
       }
