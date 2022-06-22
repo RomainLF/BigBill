@@ -49,7 +49,7 @@ const statsContext = createContext();
 export default statsContext;
 
 export function StatsContext({ children }) {
-  const [timer, setTimer] = useState(2029);
+  const [timer, setTimer] = useState(2027);
   const [money, setMoney] = useState(400000);
   const [earth, setEarth] = useState(0);
   const [eau, setEau] = useState(0);
@@ -103,7 +103,7 @@ export function StatsContext({ children }) {
     const hasEventForCurrentTimer = events.filter(
       (e) => e.timerTrigger === timer
     );
-    if (hasEventForCurrentTimer[0]) {
+    if (hasEventForCurrentTimer[0] && timerActive === true) {
       setCurrentEvent(hasEventForCurrentTimer);
       setTodo(todo + 1);
       setTimerActive(false);
@@ -272,10 +272,10 @@ export function StatsContext({ children }) {
   const events = [
     {
       id: 1,
-      title: "COP30",
+      title: "COP20",
       message:
         "Lorem ipsum dolor sit amet. Qui voluptatem nihil aut aspernatur est iusto animi quo libero nisi. Est molestiae doloremque et dolore deleniti in eaque omnis. Sit molestiae tenetur et soluta iusto aut obcaecati vitae At tenetur deleniti!",
-      timerTrigger: 2030,
+      timerTrigger: 2029,
       moneyImpact: 8000,
       eau: 200,
       sol: 50,
@@ -285,10 +285,10 @@ export function StatsContext({ children }) {
     },
     {
       id: 2,
-      title: "COP40",
+      title: "COP30",
       message:
         "Lorem ipsum dolor sit amet. Qui voluptatem nihil aut aspernatur est iusto animi quo libero nisi. Est molestiae doloremque et dolore deleniti in eaque omnis. Sit molestiae tenetur et soluta iusto aut obcaecati vitae At tenetur deleniti! ",
-      timerTrigger: 2040,
+      timerTrigger: 2039,
       moneyImpact: 10000,
       eau: 0,
       sol: 0,
@@ -298,10 +298,10 @@ export function StatsContext({ children }) {
     },
     {
       id: 3,
-      title: "COP50",
+      title: "COP40",
       message:
         "Lorem ipsum dolor sit amet. Qui voluptatem nihil aut aspernatur est iusto animi quo libero nisi. Est molestiae doloremque et dolore deleniti in eaque omnis. Sit molestiae tenetur et soluta iusto aut obcaecati vitae At tenetur deleniti!",
-      timerTrigger: 2050,
+      timerTrigger: 2049,
       moneyImpact: 30000,
       eau: 0,
       sol: 300,
