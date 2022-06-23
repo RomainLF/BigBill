@@ -154,15 +154,16 @@ export default styled.section`
         width: 90vw;
         flex-direction: row;
         img {
-          width: 100%;
+          width: 105%;
           aspect-ratio: 1/1;
-          margin-top: 0vh;
+          margin-top: -24%;
         }
         .mainButton {
           margin-top: 0vh;
         }
       }
       .info {
+        margin-top: -18%;
         height: 50vh;
         width: 90vw;
         font-size: 0.7rem;
@@ -190,6 +191,10 @@ export default styled.section`
             }
           }
         }
+      }
+    }
+    .stats {
+      .cadre {
       }
     }
   }

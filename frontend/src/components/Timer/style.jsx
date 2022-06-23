@@ -17,7 +17,7 @@ export default styled.div`
     display: block;
     text-shadow: none;
     border: 0.2em solid #00487d;
-    height: 9%;
+    height: 11%;
     .timer {
       font-size: 0.8em;
       p {
