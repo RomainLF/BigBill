@@ -13,9 +13,20 @@ export default styled.div`
     font-size: 2rem;
   }
   @media screen and (max-width: 600px) {
+    margin-left: 0;
+    display: block;
+    text-shadow: none;
+    border: 0.2em solid #00487d;
+    height: 9%;
     .timer {
-      font-size: 32px;
-      margin-bottom: 0.5rem;
+      font-size: 0.8em;
+      p {
+        display: flex;
+        flex-direction: column;
+        span {
+          font-size: 1.8em;
+        }
+      }
     }
   }
 `;

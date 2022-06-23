@@ -146,5 +146,51 @@ export default styled.section`
     h1 {
       text-align: center;
     }
+    .start {
+      display: flex;
+      flex-direction: column-reverse;
+      .autre {
+        height: 16vh;
+        width: 90vw;
+        flex-direction: row;
+        img {
+          width: 100%;
+          aspect-ratio: 1/1;
+          margin-top: 0vh;
+        }
+        .mainButton {
+          margin-top: 0vh;
+        }
+      }
+      .info {
+        height: 50vh;
+        width: 90vw;
+        font-size: 0.7rem;
+        .note {
+          .titleGame {
+            height: 2.5vh;
+          }
+        }
+        .twodiv {
+          height: 97%;
+          margin-top: -6%;
+          .news {
+            .titleNews {
+              height: 2.5vh;
+            }
+          }
+          .know {
+            height: 23%;
+            .titleNews {
+              height: 2.5vh;
+            }
+            p {
+              font-size: 0.6rem;
+              margin-left: 0.3rem;
+            }
+          }
+        }
+      }
+    }
   }
 `;

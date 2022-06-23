@@ -18,4 +18,9 @@ export default styled.div`
   button:active {
     text-decoration: none;
   }
+  @media screen and (max-width: 600px) {
+    button {
+      box-shadow: 0em 0em 0.9em 0.05em #014829;
+    }
+  }
 `;

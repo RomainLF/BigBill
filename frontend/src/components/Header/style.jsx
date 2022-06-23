@@ -26,11 +26,12 @@ export default styled.header`
   }
 
   @media screen and (max-width: 600px) {
-    .catFiltre {
-      display: none;
-    }
-    img {
-      margin-top: 0.1rem;
+    .displayButton {
+      button {
+        height: 4vh;
+        width: 25vw;
+        font-size: 0.7em;
+      }
     }
   }
 `;

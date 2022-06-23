@@ -22,5 +22,13 @@ export default styled.div`
     width: 90%;
   }
   @media screen and (max-width: 600px) {
+    .center {
+      width: 100%;
+      text-align: start;
+      .plus {
+        padding: 0;
+        width: 100%;
+      }
+    }
   }
 `;
