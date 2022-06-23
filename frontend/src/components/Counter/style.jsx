@@ -44,19 +44,21 @@ export default styled.div`
     }
   }
   @media screen and (max-width: 600px) {
+    margin-left: 28vw;
     .money {
       height: 5vh;
       font-size: 40px;
-      margin-top: -6rem;
+      margin-top: -5rem;
     }
-    .earth {
-      width: 6rem;
-      font-size: 40px;
-      margin-top: 2rem;
-      margin: 1rem -5rem 0 0;
-
-      img {
-        width: 8rem;
+    .stats {
+      width: 55vw;
+      .elem {
+        img {
+          width: 30%;
+        }
+        span {
+          margin-right: -22%;
+        }
       }
     }
   }

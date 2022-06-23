@@ -25,6 +25,10 @@ export default styled.div`
   }
   table {
     background-color: #d7d6d6;
+    width: 100%;
+    height: 60%;
+    font-size: 100%;
+    margin-bottom: 7%;
     th {
       border: 1px solid #00487d;
     }
@@ -64,5 +68,19 @@ export default styled.div`
     font-weight: bold;
   }
   @media screen and (max-width: 600px) {
+    height: 10rem;
+    width: 100%;
+    table {
+      width: 60%;
+      height: 99%;
+      font-size: 70%;
+    }
+    .mobileV {
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      display: none;
+    }
   }
 `;

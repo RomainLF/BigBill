@@ -20,45 +20,47 @@ export default function Card(props) {
       <div className="profits">
         Profits : <span>{getAttributeValue(props.profit)}</span>€ /ans
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th colSpan="2">Consomation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Particules : </td>
-            <td className="qte">
-              {props.impact_ecologique}
-              <span>d./kg de produit</span>
-            </td>
-          </tr>
-          <tr>
-            <td>Eau : </td>
-            <td className="qte">
-              {props.consommation_eau}
-              <span> m3/kg de produit</span>
-            </td>
-          </tr>
-          <tr>
-            <td>Energie : </td>
-            <td className="qte">
-              {props.consommation_energetique}
-              <span> MJ/kg produit</span>
-            </td>
-          </tr>
-          <tr>
-            <td>Sol : </td>
-            <td className="qte">
-              {props.utilisation_sol}
-              <span> Pt/kg de produit</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      {props.upgrade}
-      {props.buttonAchat}
+      <div className="mobileV">
+        <table>
+          <thead>
+            <tr>
+              <th colSpan="2">Consomation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Particules : </td>
+              <td className="qte">
+                {props.impact_ecologique}
+                <span>d./kg de produit</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Eau : </td>
+              <td className="qte">
+                {props.consommation_eau}
+                <span> m3/kg de produit</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Energie : </td>
+              <td className="qte">
+                {props.consommation_energetique}
+                <span> MJ/kg produit</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Sol : </td>
+              <td className="qte">
+                {props.utilisation_sol}
+                <span> Pt/kg de produit</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        {props.upgrade}
+        {props.buttonAchat}
+      </div>
       <img src={props.image} alt="img" />
       {props.buttonVente}
     </SCard>
