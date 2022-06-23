@@ -4,7 +4,7 @@ export default styled.div`
   position: fixed;
   display: flex;
   flex-wrap: wrap;
-  width: 80vw;
+  width: 100vw;
   flex-direction: column;
   margin-left: 35vw;
   height: 20vh;
@@ -44,14 +44,17 @@ export default styled.div`
     }
   }
   @media screen and (max-width: 600px) {
-    margin-left: 28vw;
+    margin-left: 0vw;
     .money {
       height: 5vh;
-      font-size: 40px;
-      margin-top: -5rem;
+      font-size: 25px;
+      margin-right: 100%;
+      margin-top: 30%;
+      display: block;
     }
     .stats {
       width: 55vw;
+      margin-left: 30vw;
       .elem {
         img {
           width: 30%;

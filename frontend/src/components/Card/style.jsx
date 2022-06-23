@@ -68,19 +68,5 @@ export default styled.div`
     font-weight: bold;
   }
   @media screen and (max-width: 600px) {
-    height: 10rem;
-    width: 100%;
-    table {
-      width: 60%;
-      height: 99%;
-      font-size: 70%;
-    }
-    .mobileV {
-      display: flex;
-      justify-content: center;
-    }
-    img {
-      display: none;
-    }
   }
 `;
