@@ -7,6 +7,7 @@ import GaleryEmbauche from "@components/GalleryEmbauche";
 import { useContext } from "react";
 import { useEffect } from "react";
 import StatsContext from "../services/contexts/index";
+import Header from "@components/Header";
 
 export default function Game() {
   const { timer, money, endGameFunc } = useContext(StatsContext);
@@ -17,6 +18,7 @@ export default function Game() {
   return (
     <main>
       <Modal />
+      <Header />
       <section className="gallery">
         <GaleryEmbauche />
       </section>

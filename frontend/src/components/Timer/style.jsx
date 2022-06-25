@@ -5,6 +5,7 @@ export default styled.div`
   font-weight: bold;
   text-shadow: 4px 0px 0px #fafafa;
   position: fixed;
+  bottom: 0;
   height: 23%;
   margin-left: 10vw;
   display: flex;
@@ -18,6 +19,8 @@ export default styled.div`
     text-shadow: none;
     border: 0.2em solid #00487d;
     height: 11%;
+    position: fixed;
+    bottom: 0;
     .timer {
       font-size: 0.8em;
       p {

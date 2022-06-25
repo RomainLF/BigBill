@@ -20,6 +20,7 @@ export default function ModalEvents() {
         }
         <h3>Nouvel événement:</h3>
         <p>
+          {" "}
           "
           {events
             .filter((el) => el.id === todo)
@@ -37,7 +38,7 @@ export default function ModalEvents() {
             <table>
               <thead>
                 <tr>
-                  <th colSpan="2">Consomation</th>
+                  <th colSpan="2">Laisser faire</th>
                 </tr>
               </thead>
               <tbody>
@@ -93,19 +94,20 @@ export default function ModalEvents() {
             <table>
               <thead>
                 <tr>
-                  <th colSpan="2">Impact monétaire</th>
+                  <th colSpan="2">Eviter la catastrophe</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="mainTr">
                   <td>Prix</td>
                   <td>
-                    +
+                    -
                     {events
                       .filter((el) => el.id === todo)
                       .map((el) => {
                         return el.moneyImpact;
                       })}
+                    €
                   </td>
                 </tr>
               </tbody>

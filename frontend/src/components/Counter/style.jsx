@@ -4,10 +4,11 @@ export default styled.div`
   position: fixed;
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 80vw;
   flex-direction: column;
   margin-left: 35vw;
   height: 20vh;
+  bottom: 0;
   .money {
     color: #ffe100;
     font-size: 25px;

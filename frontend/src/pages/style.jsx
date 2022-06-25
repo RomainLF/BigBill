@@ -7,7 +7,7 @@ export default styled.section`
   .start {
     background: url("src/assets/home.jpg");
     background-size: cover;
-    height: 94vh;
+    height: 98vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,8 +194,8 @@ export default styled.section`
       }
     }
     .stats {
-      .cadre {
-      }
+      position: absolute;
+      background-color: red;
     }
   }
 `;

@@ -7,7 +7,7 @@ export default styled.div`
   &.active {
     display: block;
     width: 25rem;
-    height: 13rem;
+    height: 15rem;
     background-color: #ec947a;
     border: 0.5em solid #bc0000;
     margin-top: -30%;
