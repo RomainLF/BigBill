@@ -7,7 +7,7 @@ export default styled.section`
   .start {
     background: url("src/assets/home.jpg");
     background-size: cover;
-    height: 94vh;
+    height: 98vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,6 +145,57 @@ export default styled.section`
   @media screen and (max-width: 600px) {
     h1 {
       text-align: center;
+    }
+    .start {
+      display: flex;
+      flex-direction: column-reverse;
+      .autre {
+        height: 16vh;
+        width: 90vw;
+        flex-direction: row;
+        img {
+          width: 105%;
+          aspect-ratio: 1/1;
+          margin-top: -24%;
+        }
+        .mainButton {
+          margin-top: 0vh;
+        }
+      }
+      .info {
+        margin-top: -18%;
+        height: 50vh;
+        width: 90vw;
+        font-size: 0.7rem;
+        .note {
+          .titleGame {
+            height: 2.5vh;
+          }
+        }
+        .twodiv {
+          height: 97%;
+          margin-top: -6%;
+          .news {
+            .titleNews {
+              height: 2.5vh;
+            }
+          }
+          .know {
+            height: 23%;
+            .titleNews {
+              height: 2.5vh;
+            }
+            p {
+              font-size: 0.6rem;
+              margin-left: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+    .stats {
+      position: absolute;
+      background-color: red;
     }
   }
 `;

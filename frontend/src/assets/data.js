@@ -24,7 +24,7 @@ const datas = [
     nom: "Champ d'avocat",
     profit: 17000,
     impact_ecologique: 275,
-    consommation_eau: 340,
+    consommation_eau: 3400,
     consommation_energetique: 317,
     utilisation_sol: 124,
     image: avocat,

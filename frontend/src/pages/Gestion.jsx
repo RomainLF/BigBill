@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { useEffect } from "react";
 import StatsContext from "../services/contexts/index";
 import Chart from "@components/Chart";
+import Header from "@components/Header";
 
 export default function Game() {
   const { timer, money, endGameFunc } = useContext(StatsContext);
@@ -17,16 +18,15 @@ export default function Game() {
   return (
     <main>
       <Modal />
+      <Header />
       <section className="gallery">
         <GaleryGestion />
       </section>
       <section className="stats">
-        <div className="cadre">
-          <Logo />
-          <Counter />
-          <Timer />
-          <Chart />
-        </div>
+        <Logo />
+        <Counter />
+        <Timer />
+        <Chart />
       </section>
     </main>
   );

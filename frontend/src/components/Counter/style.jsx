@@ -7,7 +7,8 @@ export default styled.div`
   width: 80vw;
   flex-direction: column;
   margin-left: 35vw;
-  height: 20vh;
+  height: 22vh;
+  bottom: 0;
   .money {
     color: #ffe100;
     font-size: 25px;
@@ -44,19 +45,24 @@ export default styled.div`
     }
   }
   @media screen and (max-width: 600px) {
+    margin-left: 0vw;
     .money {
       height: 5vh;
-      font-size: 40px;
-      margin-top: -6rem;
+      font-size: 25px;
+      margin-right: 100%;
+      margin-top: 30%;
+      display: block;
     }
-    .earth {
-      width: 6rem;
-      font-size: 40px;
-      margin-top: 2rem;
-      margin: 1rem -5rem 0 0;
-
-      img {
-        width: 8rem;
+    .stats {
+      width: 55vw;
+      margin-left: 30vw;
+      .elem {
+        img {
+          width: 30%;
+        }
+        span {
+          margin-right: -22%;
+        }
       }
     }
   }

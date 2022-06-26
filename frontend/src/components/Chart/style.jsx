@@ -7,8 +7,8 @@ export default styled.div`
   width: 100vw;
   justify-content: flex-end;
   .mainGraph {
-    width: 19rem;
-    height: 11rem;
+    width: 20vmax;
+    height: 12vmax;
     background-color: #ffffff;
     border: solid 0.2em #00487d;
   }

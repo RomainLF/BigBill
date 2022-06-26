@@ -8,8 +8,13 @@ export default function Timer() {
   return (
     <STimer>
       <div className="timer">
-        <p> Année : {timer}</p>
-        <p>Bénéfices par an:{annualProfit}€</p>
+        <p>
+          {" "}
+          Année : <span>{timer}</span>
+        </p>
+        <p>
+          Bénéfices par an:<span>{annualProfit}€</span>
+        </p>
       </div>
     </STimer>
   );

@@ -24,19 +24,23 @@ export default function Home() {
               <div className="titleGame">LE JEU</div>
               <ul>
                 <li>
-                  Votre but est de vous enrichir tout en préservant la planete
+                  -Votre but est de vous enrichir tout en préservant la planète
                 </li>
-                <li>Vous commencez avec 400 000 $</li>
+                <li>-Vous commencez avec 400 000€</li>
                 <li>
-                  Chaque achat que vous faites à un impacte positif ou negatif
-                  sur la planete
+                  -Chaque achat que vous faites a un impact positif ou négatif
+                  sur la planète
                 </li>
-                <li>Vous pouvez gerer vos achats dans l'onglet "Gestion"</li>
+                <li>-Vous pouvez gérer vos achats dans l'onglet "Gestion"</li>
                 <li>
-                  Attention, des évenements peuvent intervenir au cours de la
+                  -Pour vous aidez à agrandir votre empire financier vous pouvez
+                  embauché du personnel dans l'onglet "Embauché"
+                </li>
+                <li>
+                  -Attention, des évenements peuvent intervenir au cours de la
                   partie
                 </li>
-                <li>Vous avez jusqu'a l'année 2100 pour investir </li>
+                <li>-Vous avez jusqu'à l'année 2100 pour investir</li>
               </ul>
             </div>
             <section className="twodiv">
@@ -46,7 +50,7 @@ export default function Home() {
               <div className="know">
                 <div className="titleNews">A SAVOIR</div>
                 <p>
-                  Toutes les données présente sur BigBill invest vienne de:
+                  Toutes les données présentes sur BigBill invest viennent de:
                   <a href="https://agribalyse.ademe.fr/">
                     https://agribalyse.ademe.fr/
                   </a>

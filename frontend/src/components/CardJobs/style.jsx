@@ -135,5 +135,70 @@ export default styled.div`
     }
   }
   @media screen and (max-width: 600px) {
+    .mainInfo {
+      span {
+        font-size: 1rem;
+      }
+      .nameJobs {
+        font-size: 1.1rem;
+      }
+      .roleJobs {
+        font-size: 0.9rem;
+        font-style: italic;
+      }
+    }
+    .mainBio {
+      font-size: 0.7rem;
+    }
+    .cor {
+      font-size: 0.7rem;
+      .autre {
+        span {
+          font-weight: 900;
+        }
+      }
+    }
+    .statsJobs {
+      .titleStats {
+      }
+      .litleStats {
+        font-size: 0.6rem;
+        .ecolo {
+          margin-left: 0rem;
+        }
+        .eau {
+          margin-left: 0rem;
+        }
+        .energie {
+          margin-left: 0rem;
+        }
+        .sol {
+          margin-left: 0rem;
+        }
+        span {
+        }
+      }
+    }
+    .mainProfit {
+      span {
+        font-size: 0.5rem;
+      }
+      .litleStatsProfit {
+        font-size: 1rem;
+        p {
+          font-weight: 900;
+        }
+      }
+    }
+    .contrat {
+      .contratSpan {
+        font-size: 0.7rem;
+      }
+      span {
+        font-size: 0.4rem;
+      }
+      button {
+      }
+    }
   }
 `;

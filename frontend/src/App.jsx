@@ -16,7 +16,6 @@ function App() {
       <StatsContext>
         <Reset />
         <GlobalStyle>
-          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/investissement" element={<Investissement />} />

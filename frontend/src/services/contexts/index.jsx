@@ -49,7 +49,7 @@ const statsContext = createContext();
 export default statsContext;
 
 export function StatsContext({ children }) {
-  const [timer, setTimer] = useState(2027);
+  const [timer, setTimer] = useState(2029);
   const [money, setMoney] = useState(400000);
   const [earth, setEarth] = useState(0);
   const [eau, setEau] = useState(0);
@@ -68,7 +68,8 @@ export function StatsContext({ children }) {
   const [eventModal, setEventModal] = useState(false);
   const [chartDataYears, setChartDataYears] = useState(["2021"]);
   const [chartDataProfit, setChartDataProfit] = useState([0]);
-  const [todo, setTodo] = useState(1);
+  const [todo, setTodo] = useState(0);
+  const [currentNotif, setCurrentNotif] = useState("");
 
   useInterval(() => {
     if (timerActive === true) setTimer((prevState) => prevState + 1);
@@ -161,7 +162,7 @@ export function StatsContext({ children }) {
   };
 
   const endGameFunc = () => {
-    if (earth >= 5000 || timer >= 2060 || money <= 0) {
+    if (earth >= 11000 || timer >= 2060 || money <= 0) {
       setEndGame(true);
       reset();
       setModal(true);
@@ -272,9 +273,8 @@ export function StatsContext({ children }) {
   const events = [
     {
       id: 1,
-      title: "COP20",
-      message:
-        "Lorem ipsum dolor sit amet. Qui voluptatem nihil aut aspernatur est iusto animi quo libero nisi. Est molestiae doloremque et dolore deleniti in eaque omnis. Sit molestiae tenetur et soluta iusto aut obcaecati vitae At tenetur deleniti!",
+      title: "Des vagues de chaleur plus fréquentes et intenses",
+      message: `Rapport climat du GIEC pour 2030: À ce rythme, le seuil de 1,5 °C pourrait être franchi dès 2030 » En 2030 dans l'Hexagone, selon Météo France, le mercure pourrait localement dépasser les 50 °C. source: https://www.afd.fr/fr/actualites/seuil-1degre5-possible-des-2030`,
       timerTrigger: 2029,
       moneyImpact: 8000,
       eau: 200,
@@ -285,27 +285,40 @@ export function StatsContext({ children }) {
     },
     {
       id: 2,
-      title: "COP30",
+      title: "Crise alimentaire",
       message:
-        "Lorem ipsum dolor sit amet. Qui voluptatem nihil aut aspernatur est iusto animi quo libero nisi. Est molestiae doloremque et dolore deleniti in eaque omnis. Sit molestiae tenetur et soluta iusto aut obcaecati vitae At tenetur deleniti! ",
+        "En octobre 2018, le Groupe d’experts intergouvernemental sur l’évolution du climat a publié un rapport décrivant le paysage mondial en 2040. Les auteurs ont prédit de graves pénuries alimentaires, des incendies dévastateurs et la mort massive des récifs coralliens. source: https://www.acted.org/fr/se-preparer-pour-2040/",
       timerTrigger: 2039,
       moneyImpact: 10000,
-      eau: 0,
-      sol: 0,
-      particule: 900,
-      energie: 450,
+      eau: 100,
+      sol: 100,
+      particule: 0,
+      energie: 650,
       todo: false,
     },
     {
       id: 3,
-      title: "COP40",
+      title: "Un tsunami en Méditerranée",
       message:
-        "Lorem ipsum dolor sit amet. Qui voluptatem nihil aut aspernatur est iusto animi quo libero nisi. Est molestiae doloremque et dolore deleniti in eaque omnis. Sit molestiae tenetur et soluta iusto aut obcaecati vitae At tenetur deleniti!",
+        "La probabilité d'une vague d'un mètre, donc catastrophique, dans les trente prochaines années est très élevée estime-t-on du côté des experts de L’UNESCO. source: https://www.francebleu.fr/infos/societe/un-grand-tsunami-probable-en-mediterranee-d-ici-a-30-ans-et-la-corse-1655915403",
       timerTrigger: 2049,
       moneyImpact: 30000,
       eau: 0,
       sol: 300,
       particule: 300,
+      energie: 300,
+      todo: false,
+    },
+    {
+      id: 4,
+      title: "Le pôle Nord bientôt libre de glace en été",
+      message:
+        "Quoi que l’on fasse dorénavant, la banquise arctique sera très probablement amenée à disparaître en été, au moins certaines années, et ce dès avant 2050. Ce sont les résultats d'une nouvelle étude menée par une collaboration internationale comprenant 21 institutions de recherche du monde entier. Source: https://www.insu.cnrs.fr/fr/cnrsinfo/le-pole-nord-bientot-libre-de-glace-en-ete",
+      timerTrigger: 2049,
+      moneyImpact: 30000,
+      eau: 0,
+      sol: 0,
+      particule: 800,
       energie: 300,
       todo: false,
     },
@@ -355,6 +368,8 @@ export function StatsContext({ children }) {
         events,
         todo,
         setTodo,
+        currentNotif,
+        setCurrentNotif,
       }}
     >
       {children}
