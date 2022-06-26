@@ -7,7 +7,7 @@ export default styled.div`
   width: 80vw;
   flex-direction: column;
   margin-left: 35vw;
-  height: 20vh;
+  height: 22vh;
   bottom: 0;
   .money {
     color: #ffe100;

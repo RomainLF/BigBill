@@ -4,12 +4,21 @@ import statsContext from "@services/contexts";
 import { useState } from "react";
 
 export default function CardAchat(props) {
-  const { money, setMoney, annualProfit, setAnnualProfit, setData, data } =
-    useContext(statsContext);
+  const {
+    money,
+    setMoney,
+    annualProfit,
+    setAnnualProfit,
+    setData,
+    data,
+    currentNotif,
+    setCurrentNotif,
+  } = useContext(statsContext);
 
   //========  €  =======//
   const deIncrementMoney = () => {
     setMoney(money - props.cout_achat);
+    setCurrentNotif("notif active");
   };
   //Incremente les profits par an//
   const incrementAnnualProfit = () => {

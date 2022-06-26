@@ -22,6 +22,19 @@ export default styled.header`
       font-size: 1rem;
       font-weight: 600;
       background-color: #c3c4cd;
+      .notif {
+        position: absolute;
+        display: none;
+        &.active {
+          display: block;
+          width: 1.8%;
+          aspect-ratio: 1/1;
+          right: 39.5%;
+          top: 0.1%;
+          background-color: red;
+          border-radius: 50%;
+        }
+      }
     }
   }
 

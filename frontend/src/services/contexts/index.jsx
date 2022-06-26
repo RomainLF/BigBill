@@ -69,6 +69,7 @@ export function StatsContext({ children }) {
   const [chartDataYears, setChartDataYears] = useState(["2021"]);
   const [chartDataProfit, setChartDataProfit] = useState([0]);
   const [todo, setTodo] = useState(0);
+  const [currentNotif, setCurrentNotif] = useState("");
 
   useInterval(() => {
     if (timerActive === true) setTimer((prevState) => prevState + 1);
@@ -367,6 +368,8 @@ export function StatsContext({ children }) {
         events,
         todo,
         setTodo,
+        currentNotif,
+        setCurrentNotif,
       }}
     >
       {children}
