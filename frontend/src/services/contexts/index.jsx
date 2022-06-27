@@ -49,7 +49,7 @@ const statsContext = createContext();
 export default statsContext;
 
 export function StatsContext({ children }) {
-  const [timer, setTimer] = useState(2029);
+  const [timer, setTimer] = useState(2022);
   const [money, setMoney] = useState(400000);
   const [earth, setEarth] = useState(0);
   const [eau, setEau] = useState(0);
