@@ -35,7 +35,7 @@ const datasjobs = [
     bio: "Jeune développeur web de 24 ans actuellement en formation dans le cadre d'une reconversion professionnelle. Je cherche un stage à partir de septembre 2022 pour me perfectionner. Le monde du développement me passionne grandement et je serais heureux d'exercer ma passion au sein de votre entreprise !",
     contrat: "STAGE",
     duree: "4 à 5 mois",
-    contact: "",
+    contact: "https://www.linkedin.com/in/romainlf/",
     price: 4000,
     profit: 200,
     impact_ecologique: -300,

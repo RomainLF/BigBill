@@ -35,7 +35,15 @@ export default function Card(props) {
             <br />
             {props.centre_interet}
           </div>
-          <div>{props.contact}</div>
+          <div>
+            <span>LINKEDIN:</span>
+            <a
+              href="https://www.linkedin.com/in/romainlf/"
+              className="contactJobs"
+            >
+              {props.contact}
+            </a>
+          </div>
         </section>
         <section className="statsJobs">
           <div className="titleStats">Stats</div>

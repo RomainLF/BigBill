@@ -39,7 +39,7 @@ export default styled.section`
         }
         ul {
           margin-top: -1em;
-
+          font-size: 1.2vmax;
           li {
             margin-top: 2em;
             margin-left: 1em;
@@ -68,6 +68,14 @@ export default styled.section`
             justify-content: center;
             color: #000000;
           }
+          ul {
+            color: #aaaaaa;
+            font-size: 1.2vmax;
+            li {
+              margin-top: 2em;
+              margin-left: 1em;
+            }
+          }
         }
         .know {
           width: 90%;
@@ -90,6 +98,7 @@ export default styled.section`
           p {
             color: #aaaaaa;
             margin-top: 10%;
+            font-size: 1.2vmax;
           }
         }
       }

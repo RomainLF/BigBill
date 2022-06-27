@@ -45,6 +45,9 @@ export default styled.div`
         font-weight: 900;
       }
     }
+    .contactJobs {
+      text-decoration: underline;
+    }
   }
   .statsJobs {
     width: 50%;

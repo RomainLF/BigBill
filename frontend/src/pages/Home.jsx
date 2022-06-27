@@ -46,6 +46,16 @@ export default function Home() {
             <section className="twodiv">
               <div className="news">
                 <div className="titleNews">PROCHAINEMENT</div>
+                <ul>
+                  <li>
+                    -Ajout d'un systeme pour s'enregistrer / se connecter afin
+                    de sauvegarder son score
+                  </li>
+                  <li>
+                    -Correction d'un bug d'affichage sur les profits annuels
+                  </li>
+                  <li>-Ajout de nouveaux employés à embaucher </li>
+                </ul>
               </div>
               <div className="know">
                 <div className="titleNews">A SAVOIR</div>
