@@ -48,7 +48,7 @@ export default function Home() {
                 <div className="titleNews">PROCHAINEMENT</div>
                 <ul>
                   <li>
-                    -Ajout d'un systeme pour s'enregistrer / se connecter afin
+                    -Ajout d'un système pour s'enregistrer / se connecter afin
                     de sauvegarder son score
                   </li>
                   <li>
@@ -58,7 +58,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="know">
-                <div className="titleNews">A SAVOIR</div>
+                <div className="titleNews">À SAVOIR</div>
                 <p>
                   Toutes les données présentes sur BigBill invest viennent de:
                   <a href="https://agribalyse.ademe.fr/">
