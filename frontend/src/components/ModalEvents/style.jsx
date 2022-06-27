@@ -65,4 +65,27 @@ export default styled.div`
       }
     }
   }
+  @media screen and (max-width: 600px) {
+    &.active {
+      width: 100vw;
+      height: 16rem;
+      margin-top: -100%;
+      box-sizing: border-box;
+      h2 {
+      }
+      h3 {
+      }
+      p {
+      }
+      .choice {
+        .buttonModal {
+        }
+        table {
+          height: 100%;
+          thead {
+          }
+        }
+      }
+    }
+  }
 `;
