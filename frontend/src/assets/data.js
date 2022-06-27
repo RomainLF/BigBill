@@ -96,7 +96,7 @@ const datas = [
     cout_achat: 28290,
     superficie: "1hectar",
     production: 34,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -112,7 +112,7 @@ const datas = [
     cout_achat: 59648,
     superficie: "1hectar",
     production: 9,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -128,7 +128,7 @@ const datas = [
     cout_achat: 61860,
     superficie: "1hectar",
     production: 8,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -144,7 +144,7 @@ const datas = [
     cout_achat: 400000,
     superficie: "1hectar",
     production: 0,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -160,7 +160,7 @@ const datas = [
     cout_achat: 40000,
     superficie: "1hectar",
     production: 0,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -176,7 +176,7 @@ const datas = [
     cout_achat: 213200,
     superficie: "1hectar",
     production: 10,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -192,7 +192,7 @@ const datas = [
     cout_achat: 73690,
     superficie: "1hectar",
     production: 7,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -208,7 +208,7 @@ const datas = [
     cout_achat: 220000,
     superficie: "1hectar",
     production: 100,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -224,7 +224,7 @@ const datas = [
     cout_achat: 105720,
     superficie: "1hectar",
     production: 640,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -240,7 +240,7 @@ const datas = [
     cout_achat: 87840,
     superficie: "1hectar",
     production: 1268,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -256,7 +256,7 @@ const datas = [
     cout_achat: 93550,
     superficie: "1hectar",
     production: 13,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -272,7 +272,7 @@ const datas = [
     cout_achat: 124500,
     superficie: "1hectar",
     production: 19,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -288,7 +288,7 @@ const datas = [
     cout_achat: 18740,
     superficie: "1hectar",
     production: 9,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
   {
@@ -304,7 +304,7 @@ const datas = [
     cout_achat: 246800,
     superficie: "1hectar",
     production: 9,
-    upgrades: 0,
+    upgrades: 1,
     isPreviewNextUpgrade: false,
   },
 ];
