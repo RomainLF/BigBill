@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { useEffect } from "react";
 import StatsContext from "../services/contexts/index";
 import Header from "@components/Header";
+import FooterGame from "@components/FooterGame";
 
 export default function Game() {
   const { timer, money, endGameFunc } = useContext(StatsContext);
@@ -23,11 +24,7 @@ export default function Game() {
         <Gallery />
       </section>
       <section className="stats">
-        <div className="cadre">
-          <Logo />
-          <Counter />
-          <Timer />
-        </div>
+        <FooterGame />
         <Avatar />
       </section>
     </main>

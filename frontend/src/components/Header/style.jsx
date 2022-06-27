@@ -14,14 +14,16 @@ export default styled.header`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 0.9em;
     button {
+      font-size: 0.8rem;
       width: 20vw;
       height: 5vh;
       border: none;
       box-shadow: 8px 6px 5px 0px rgba(0, 0, 0, 0.75);
-      font-size: 1rem;
       font-weight: 600;
       background-color: #c3c4cd;
+      color: black;
       .notif {
         position: absolute;
         display: none;
@@ -44,6 +46,13 @@ export default styled.header`
         height: 4vh;
         width: 25vw;
         font-size: 0.7em;
+        .notif {
+          &.active {
+            width: 4%;
+            right: 37%;
+            top: 0.5%;
+          }
+        }
       }
     }
   }

@@ -192,7 +192,7 @@ export default styled.div`
     }
     .contrat {
       .contratSpan {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
       }
       span {
         font-size: 0.4rem;
