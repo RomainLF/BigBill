@@ -196,6 +196,7 @@ export default styled.section`
     .stats {
       position: absolute;
       background-color: red;
+      height: 12vh;
     }
   }
 `;

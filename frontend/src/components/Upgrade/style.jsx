@@ -5,6 +5,7 @@ export default styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -9%;
   .test {
     background: linear-gradient(to bottom, #c7e9ff 5%, #ebf5fb 100%);
     width: 95%;

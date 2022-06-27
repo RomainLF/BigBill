@@ -10,11 +10,14 @@ export default function ButtonJobs(props) {
     setAnnualProfit,
     datajobs,
     setDatajobs,
+    setCurrentNotif,
+    currentNotif,
   } = useContext(statsContext);
 
   //========  $  =======//
   const deIncrementMoney = () => {
     setMoney(money - props.price);
+    setCurrentNotif("notif active");
   };
   //Incremente les profits par an//
   const incrementAnnualProfit = () => {
