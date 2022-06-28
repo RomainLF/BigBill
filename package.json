@@ -9,7 +9,8 @@
     "dev-front": "npm --prefix ./frontend run dev",
     "dev-back": "npm --prefix ./backend run dev",
     "lint": "npm --prefix ./frontend run lint && npm --prefix ./backend run lint",
-    "fix": "npm --prefix ./frontend run fix && npm --prefix ./backend run fix"
+    "fix": "npm --prefix ./frontend run fix && npm --prefix ./backend run fix",
+    "build": "react-scripts build"
   },
   "keywords": [],
   "author": "Wild Code School",
@@ -17,5 +18,8 @@
   "devDependencies": {
     "concurrently": "^7.0.0",
     "husky": "^7.0.0"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
   }
 }

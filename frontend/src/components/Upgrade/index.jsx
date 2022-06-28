@@ -26,6 +26,7 @@ export default function Upgrade({ card, setData, data }) {
       );
   };
 
+
   return (
     <SUpgrade>
       <div className="test">
