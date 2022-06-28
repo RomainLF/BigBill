@@ -19,6 +19,13 @@ export default function Home() {
             </div>
           </section>
 
+          <section className="infoMobile">
+            <p>
+              Toutes les fonctionnalités du jeu ne sont pas disponibles en
+              version mobile
+            </p>
+          </section>
+
           <section className="info">
             <div className="note">
               <div className="titleGame">LE JEU</div>

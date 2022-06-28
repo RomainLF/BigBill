@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import imgbackground from "../assets/home.jpg";
 
 export default styled.section`
   font-weight: Bold;
   height: 94vh;
 
   .start {
-    background: url("src/assets/home.jpg");
+    background: url(${imgbackground});
     background-size: cover;
     height: 98vh;
     display: flex;
@@ -103,6 +104,13 @@ export default styled.section`
         }
       }
     }
+    .infoMobile {
+      display: none;
+      text-align: center;
+      p {
+        color: red;
+      }
+    }
     .autre {
       background-color: #aaaaaa;
       height: 80vh;
@@ -169,6 +177,13 @@ export default styled.section`
         }
         .mainButton {
           margin-top: 0vh;
+        }
+      }
+      .infoMobile {
+        display: block;
+        text-align: center;
+        p {
+          color: red;
         }
       }
       .info {

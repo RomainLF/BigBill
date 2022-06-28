@@ -158,7 +158,6 @@ export function StatsContext({ children }) {
 
   const reset = () => {
     setTimerActive(false);
-    setTimer(0);
   };
 
   const endGameFunc = () => {
@@ -284,8 +283,8 @@ export function StatsContext({ children }) {
       title: "Des vagues de chaleur plus fréquentes et intenses",
       message: `Rapport climat du GIEC pour 2030: À ce rythme, le seuil de 1,5 °C pourrait être franchi dès 2030 » En 2030 dans l'Hexagone, selon Météo France, le mercure pourrait localement dépasser les 50 °C. source: https://www.afd.fr/fr/actualites/seuil-1degre5-possible-des-2030`,
       timerTrigger: 2029,
-      moneyImpact: 8000,
-      eau: 200,
+      moneyImpact: 25000,
+      eau: 700,
       sol: 50,
       particule: 200,
       energie: 120,
@@ -297,11 +296,11 @@ export function StatsContext({ children }) {
       message:
         "En octobre 2018, le Groupe d’experts intergouvernemental sur l’évolution du climat a publié un rapport décrivant le paysage mondial en 2040. Les auteurs ont prédit de graves pénuries alimentaires, des incendies dévastateurs et la mort massive des récifs coralliens. source: https://www.acted.org/fr/se-preparer-pour-2040/",
       timerTrigger: 2039,
-      moneyImpact: 10000,
+      moneyImpact: 18000,
       eau: 100,
-      sol: 100,
+      sol: 700,
       particule: 0,
-      energie: 650,
+      energie: 350,
       todo: false,
     },
     {
@@ -312,9 +311,9 @@ export function StatsContext({ children }) {
       timerTrigger: 2049,
       moneyImpact: 30000,
       eau: 0,
-      sol: 300,
-      particule: 300,
-      energie: 300,
+      sol: 400,
+      particule: 0,
+      energie: 400,
       todo: false,
     },
     {
@@ -326,7 +325,7 @@ export function StatsContext({ children }) {
       moneyImpact: 30000,
       eau: 0,
       sol: 0,
-      particule: 800,
+      particule: 1200,
       energie: 300,
       todo: false,
     },
