@@ -162,7 +162,15 @@ export function StatsContext({ children }) {
   };
 
   const endGameFunc = () => {
-    if (earth >= 11000 || timer >= 2060 || money <= 0) {
+    if (
+      earth >= 11000 ||
+      eau >= 11000 ||
+      energie >= 11000 ||
+      sol >= 11000 ||
+      timer >= 2060 ||
+      money <= 0 ||
+      impactEcolo >= 11000
+    ) {
       setEndGame(true);
       reset();
       setModal(true);

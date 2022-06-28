@@ -22,7 +22,7 @@ export default function ButtonFired(props) {
             deIncrementInvest();
           }}
         >
-          Pomouvoir
+          Promouvoir
         </button>
       </div>
     </SButtonPromotion>
