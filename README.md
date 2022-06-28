@@ -1,18 +1,19 @@
-## Hackaton Wild Code School -05.2022
-
-## Team : Casier Julianne, Jorand Jérémy, Mao Massima, Le Floch Romain, Di Cola Thomas
+## V2 Hackaton Wild Code School
 
 ## Ecology / Green IT
 
-## 30h
+## 6 semaines en paralèle des cours 
 
-## Projet Big Bill
+## Projet BigBill invest
 
-Jeu d'investissement dans lequel il vous faudra faire attention à vos choix. Certains vous rapporteront plus que d'autres.
-But du jeu : vous enrichir tout en préservant la planète.
+BigBill invest est un jeu rétro dans lequel vous allez incarner un riche homme d’affaires qui cherche à investir son argent. Vous allez avoir la possibilité d’investir dans une vingtaine de secteurs différents, et de les développer en les améliorant. Attention, chaque achat a un impact sur la planète. Tout au long de votre développement, vous allez devoir faire attention à votre impact écologique. Cet impact écologique se caractérise par votre consommation d’eau, d’énergie, des rejets de particules fines et de l’utilisation des sols. 
 
-Pour réaliser le projet nous avons utilisé le template que nous utilisons en formation.
-Après avoir cloné le repo, il faudra suivre les instructions suivantes :
+Comme un empire financier ne se construit pas seul vous avez également la possibilité d’embaucher des employés pour vous aider dans votre ascension. Les employés possèdent des compétences et des caractéristiques propres à chacun.   
+
+Au cours de la partie des événements peuvent intervenir, comme des catastrophes climatiques. À vous de savoir les éviter et de faire le nécessaire quand celles-ci arrivent.  
+
+Serez-vous avides d’argent sans regarder les conséquences de vos actes, ou serez-vous assez adroits pour trouver le bon équilibre entre votre profit et votre impact sur la planète ? 
+
 
 ## Setup & Use
 
