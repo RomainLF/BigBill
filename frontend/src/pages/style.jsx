@@ -40,7 +40,7 @@ export default styled.section`
         }
         ul {
           margin-top: -1em;
-          font-size: 1.3vmax;
+          font-size: 1.2vmax;
           li {
             margin-top: 2em;
             margin-left: 1em;
@@ -71,7 +71,7 @@ export default styled.section`
           }
           ul {
             color: #aaaaaa;
-            font-size: 1.3vmax;
+            font-size: 1.2vmax;
             li {
               margin-top: 2em;
               margin-left: 1em;
