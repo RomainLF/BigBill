@@ -21,7 +21,7 @@ export default function Header() {
           </button>
         </Link>
         <Link to="/embauche">
-          <button>Embauché</button>
+          <button>Embauche</button>
         </Link>
       </div>
     </SHeader>

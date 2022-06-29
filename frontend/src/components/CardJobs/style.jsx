@@ -62,21 +62,21 @@ export default styled.div`
     .litleStats {
       background-color: #d7d6d6;
       height: 5.27rem;
-      font-size: 1rem;
+      font-size: 0.8rem;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       .ecolo {
-        margin-left: 4.5rem;
+        margin-left: 4.35rem;
       }
       .eau {
         margin-left: 3.75rem;
       }
       .energie {
-        margin-left: 0.85rem;
+        margin-left: 1.45rem;
       }
       .sol {
-        margin-left: 7.2rem;
+        margin-left: 6.7rem;
       }
       span {
         color: #b00000;

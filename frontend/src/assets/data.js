@@ -141,7 +141,7 @@ const datas = [
     utilisation_sol: -200,
     image: foret,
     categorie: "positif",
-    cout_achat: 400000,
+    cout_achat: 300000,
     superficie: "1hectar",
     production: 0,
     upgrades: 1,

@@ -166,7 +166,7 @@ export function StatsContext({ children }) {
       eau >= 11000 ||
       energie >= 11000 ||
       sol >= 11000 ||
-      timer >= 2060 ||
+      timer >= 2090 ||
       money <= 0 ||
       impactEcolo >= 11000
     ) {

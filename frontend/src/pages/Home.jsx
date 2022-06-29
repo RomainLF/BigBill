@@ -41,7 +41,7 @@ export default function Home() {
                 <li>-Vous pouvez gérer vos achats dans l'onglet "Gestion"</li>
                 <li>
                   -Pour vous aidez à agrandir votre empire financier vous pouvez
-                  embauché du personnel dans l'onglet "Embauché"
+                  embaucher du personnel dans l'onglet "Embauche"
                 </li>
                 <li>
                   -Attention, des évenements peuvent intervenir au cours de la

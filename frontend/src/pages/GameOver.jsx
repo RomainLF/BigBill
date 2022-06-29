@@ -8,7 +8,7 @@ export default function GameOver() {
       <SGameOver>
         <div className="stop">
           <a href="https://climate.selectra.com/fr/actualites/rapport-giec-2022">
-            Rapport de la GIEC
+            Rapport du GIEC
           </a>
           <a href="https://agribalyse.ademe.fr/">Agribalyse</a>
           <Link to="/">
