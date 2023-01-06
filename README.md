@@ -2,7 +2,7 @@
 
 ## Ecology / Green IT
 
-## 6 semaines en paralèle des cours 
+## 6 semaines en parallèle des cours 
 
 ## Projet BigBill invest
 
